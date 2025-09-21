@@ -35,13 +35,25 @@
 # ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años.
 # ● Adulto/a: mayor o igual que 30 años.
 
-edad = int(input("Ingrese su edad:"))
+# edad = int(input("Ingrese su edad:"))
 
-if edad < 12:
-    print("Es Niño/a")
-elif edad < 18:
-    print("Es Adolescente")
-elif edad < 30:
-    print("Es  Adulto/a joven")
+# if edad < 12:
+#     print("Es Niño/a")
+# elif edad < 18:
+#     print("Es Adolescente")
+# elif edad < 30:
+#     print("Es  Adulto/a joven")
+# else:
+#     print("Es Adulto/a")
+
+#-----------------------------------------------------------------------------------------------------------------
+
+#5) Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres (incluyendo 8 y 14). Si el usuario ingresa una contraseña de longitud adecuada, imprimir por en pantalla el mensaje "Ha ingresado una contraseña correcta"; en caso contrario, imprimir por pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". Nota: investigue el uso de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal como una lista o un string.
+
+password = input("Ingrese su contraseña, debe contener entre 8 y 14 caracteres:")
+
+if len(password) >= 8 and len(password) <= 14:
+    print("Ha ingresado una contraseña correcta")
 else:
-    print("Es Adulto/a")
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
+
