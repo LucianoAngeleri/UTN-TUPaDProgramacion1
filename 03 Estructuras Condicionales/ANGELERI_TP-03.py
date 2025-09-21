@@ -152,17 +152,42 @@
 # ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
 # ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
 
-magnitud = float(input("Ingrese la magnitud del terremoto segun la escala de Richter:"))
+# magnitud = float(input("Ingrese la magnitud del terremoto segun la escala de Richter:"))
 
-if magnitud < 3:
-    print(f"Terremoto escala {magnitud}, es Muy leve (imperceptible)")
-elif 3 <= magnitud < 4:
-    print(f"Terremoto escala {magnitud}, es Leve (ligeramente perceptible)")
-elif 4 <= magnitud < 5:
-    print(f"Terremoto escala {magnitud}, es Moderado (sentido por personas, pero generalmente no causa daños)")
-elif 5 <= magnitud < 6:
-    print(f"Terremoto escala {magnitud}, es Fuerte (puede causar daños en estructuras débiles)")
-elif 6 <= magnitud < 7:
-    print(f"Terremoto escala {magnitud}, es Muy Fuerte (puede causar daños significativos)")
-elif magnitud >= 7:
-    print(f"Terremoto escala {magnitud}, es Extremo (puede causar graves daños a gran escala)")
+# if magnitud < 3:
+#     print(f"Terremoto escala {magnitud}, es Muy leve (imperceptible)")
+# elif 3 <= magnitud < 4:
+#     print(f"Terremoto escala {magnitud}, es Leve (ligeramente perceptible)")
+# elif 4 <= magnitud < 5:
+#     print(f"Terremoto escala {magnitud}, es Moderado (sentido por personas, pero generalmente no causa daños)")
+# elif 5 <= magnitud < 6:
+#     print(f"Terremoto escala {magnitud}, es Fuerte (puede causar daños en estructuras débiles)")
+# elif 6 <= magnitud < 7:
+#     print(f"Terremoto escala {magnitud}, es Muy Fuerte (puede causar daños significativos)")
+# elif magnitud >= 7:
+#     print(f"Terremoto escala {magnitud}, es Extremo (puede causar graves daños a gran escala)")
+
+#-----------------------------------------------------------------------------------------------------------------
+
+# 10) Utilizando la información aportada en la siguiente tabla sobre las estaciones del año
+
+# Periodo del año:             |Estación en el hemisferio norte:     |Estación en el hemisferio sur:|
+# -----------------------------|-------------------------------------|------------------------------|
+# Desde el 21 de diciembre     | Invierno                            | Verano                       | 
+# hasta el 20 de marzo         |                                     |                              |
+# (incluidos)                  |                                     |                              |
+# -----------------------------|-------------------------------------|------------------------------|
+# Desde el 21 de marzo         | Primavera                           | Otoño                        |
+# hasta el 20 de junio         |                                     |                              |    
+# (incluidos)                  |                                     |                              |
+# -----------------------------|-------------------------------------|------------------------------|
+# Desde el 21 de junio         | Verano                              | Invierno                     |       
+# hasta el 20 de septiembre    |                                     |                              |
+# (incluidos)                  |                                     |                              |
+# -------------------------------------------------------------------|------------------------------|
+# Desde el 21 de septiembre    | Otoño                               | Primavera                    |
+# hasta el 20 de diciembre     |                                     |                              |
+# (incluidos)                  |                                     |                              |
+# --------------------------------------------------------------------------------------------------|
+
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla si el usuario se encuentra en otoño, invierno, primavera o verano.
