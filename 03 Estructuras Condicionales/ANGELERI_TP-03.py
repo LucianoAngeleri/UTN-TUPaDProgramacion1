@@ -9,11 +9,22 @@
 
 #2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar elmensaje “Desaprobado”
 
-nota = float(input("Ingrese su nota:"))
+# nota = float(input("Ingrese su nota:"))
 
-if nota >=6:
-    print("Aprobado")
+# if nota >=6:
+#     print("Aprobado")
+# else:
+#     print("Desaprobado")
+
+#-----------------------------------------------------------------------------------------------------------------
+
+#3) Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del operador de módulo (%) en Python para evaluar si un número es par o impar.
+
+numero = int(input("Ingrese un número:"))
+
+if numero % 2 == 0:
+    print("Ha ingresado un número par")
 else:
-    print("Desaprobado")
+    print("Por favor, ingrese un número par")    
 
 #-----------------------------------------------------------------------------------------------------------------
