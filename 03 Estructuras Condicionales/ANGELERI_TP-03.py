@@ -76,26 +76,41 @@
 # numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 # Nota: el bloque de código anterior crea una lista con 50 números entre 1 y 100 elegidos de forma aleatoria.
 
-from statistics import mode, median, mean
-import random
+# from statistics import mode, median, mean
+# import random
 
-numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+# numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 
-mediana= median(numeros_aleatorios)
-moda= mode(numeros_aleatorios)
-media= mean(numeros_aleatorios)
+# mediana= median(numeros_aleatorios)
+# moda= mode(numeros_aleatorios)
+# media= mean(numeros_aleatorios)
 
-print(f"Números:{numeros_aleatorios}")
-print("----------------------------------")
-print(f"Mediana:{mediana}")
-print(f"Moda:{moda}")
-print(f"Media:{media}")
+# print(f"Números:{numeros_aleatorios}")
+# print("----------------------------------")
+# print(f"Mediana:{mediana}")
+# print(f"Moda:{moda}")
+# print(f"Media:{media}")
 
-if (media > mediana) and (mediana > moda):
-    print("Hay sesgo positivo o a la derecha")
-elif (media < mediana) and (mediana < moda):
-    print("Hay sesgo negativo o a la izquierda")
-elif media == mediana == moda:
-    print("Sin sesgo")
+# if (media > mediana) and (mediana > moda):
+#     print("Hay sesgo positivo o a la derecha")
+# elif (media < mediana) and (mediana < moda):
+#     print("Hay sesgo negativo o a la izquierda")
+# elif media == mediana == moda:
+#     print("Sin sesgo")
+# else:
+#     print("No se encontró un tipo de sesgo identificable")
+
+#-----------------------------------------------------------------------------------------------------------------
+
+#7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por pantalla.
+
+frase = str(input("Ingrese una frase o palabra:"))
+
+ultimo_caracter= frase[-1].lower() 
+
+# con frase[-1] obtenemos el ultimo caracter de la y utilizamos el metodo .lower() para pasar la cadena a minúsculas a fin de comparar correctamente en el if
+
+if ultimo_caracter == "a" or ultimo_caracter == "e" or ultimo_caracter == "i" or ultimo_caracter == "o" or ultimo_caracter == "u":
+    print(frase+"!")
 else:
-    print("No se encontró un tipo de sesgo identificable")
+    print(frase)
