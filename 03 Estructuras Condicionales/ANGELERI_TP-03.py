@@ -1,31 +1,37 @@
 # 1) Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años, deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”.
 
-# edad = int(input("Ingrese su edad:"))
+print("Ejercicio 1")
 
-# if edad > 18:
-#     print("Es mayor de edad")
+edad = int(input("Ingrese su edad:"))
+
+if edad > 18:
+    print("Es mayor de edad")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar elmensaje “Desaprobado”
 
-# nota = float(input("Ingrese su nota:"))
+print("Ejercicio 2")
 
-# if nota >=6:
-#     print("Aprobado")
-# else:
-#     print("Desaprobado")
+nota = float(input("Ingrese su nota:"))
+
+if nota >=6:
+    print("Aprobado")
+else:
+    print("Desaprobado")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #3) Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del operador de módulo (%) en Python para evaluar si un número es par o impar.
 
-# numero = int(input("Ingrese un número:"))
+print("Ejercicio 3")
 
-# if numero % 2 == 0:
-#     print("Ha ingresado un número par")
-# else:
-#     print("Por favor, ingrese un número par")    
+numero = int(input("Ingrese un número:"))
+
+if numero % 2 == 0:
+    print("Ha ingresado un número par")
+else:
+    print("Por favor, ingrese un número par")    
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -35,27 +41,31 @@
 # ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años.
 # ● Adulto/a: mayor o igual que 30 años.
 
-# edad = int(input("Ingrese su edad:"))
+print("Ejercicio 4")
 
-# if edad < 12:
-#     print("Es Niño/a")
-# elif edad < 18:
-#     print("Es Adolescente")
-# elif edad < 30:
-#     print("Es  Adulto/a joven")
-# else:
-#     print("Es Adulto/a")
+edad = int(input("Ingrese su edad:"))
+
+if edad < 12:
+    print("Es Niño/a")
+elif edad < 18:
+    print("Es Adolescente")
+elif edad < 30:
+    print("Es  Adulto/a joven")
+else:
+    print("Es Adulto/a")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #5) Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres (incluyendo 8 y 14). Si el usuario ingresa una contraseña de longitud adecuada, imprimir por en pantalla el mensaje "Ha ingresado una contraseña correcta"; en caso contrario, imprimir por pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". Nota: investigue el uso de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal como una lista o un string.
 
-# password = input("Ingrese su contraseña, debe contener entre 8 y 14 caracteres:")
+print("Ejercicio 5")
 
-# if len(password) >= 8 and len(password) <= 14:
-#     print("Ha ingresado una contraseña correcta")
-# else:
-#     print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
+password = input("Ingrese su contraseña, debe contener entre 8 y 14 caracteres:")
+
+if len(password) >= 8 and len(password) <= 14:
+    print("Ha ingresado una contraseña correcta")
+else:
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -76,44 +86,48 @@
 # numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 # Nota: el bloque de código anterior crea una lista con 50 números entre 1 y 100 elegidos de forma aleatoria.
 
-# from statistics import mode, median, mean
-# import random
+print("Ejercicio 6")
 
-# numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
+from statistics import mode, median, mean
+import random
 
-# mediana= median(numeros_aleatorios)
-# moda= mode(numeros_aleatorios)
-# media= mean(numeros_aleatorios)
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 
-# print(f"Números:{numeros_aleatorios}")
-# print("----------------------------------")
-# print(f"Mediana:{mediana}")
-# print(f"Moda:{moda}")
-# print(f"Media:{media}")
+mediana= median(numeros_aleatorios)
+moda= mode(numeros_aleatorios)
+media= mean(numeros_aleatorios)
 
-# if (media > mediana) and (mediana > moda):
-#     print("Hay sesgo positivo o a la derecha")
-# elif (media < mediana) and (mediana < moda):
-#     print("Hay sesgo negativo o a la izquierda")
-# elif media == mediana == moda:
-#     print("Sin sesgo")
-# else:
-#     print("No se encontró un tipo de sesgo identificable")
+print(f"Números:{numeros_aleatorios}")
+print("----------------------------------")
+print(f"Mediana:{mediana}")
+print(f"Moda:{moda}")
+print(f"Media:{media}")
+
+if (media > mediana) and (mediana > moda):
+    print("Hay sesgo positivo o a la derecha")
+elif (media < mediana) and (mediana < moda):
+    print("Hay sesgo negativo o a la izquierda")
+elif media == mediana == moda:
+    print("Sin sesgo")
+else:
+    print("No se encontró un tipo de sesgo identificable")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por pantalla.
 
-# frase = str(input("Ingrese una frase o palabra:"))
+print("Ejercicio 7")
 
-# ultimo_caracter= frase[-1].lower() 
+frase = str(input("Ingrese una frase o palabra:"))
 
-# # con frase[-1] obtenemos el ultimo caracter de la y utilizamos el metodo .lower() para pasar la cadena a minúsculas a fin de comparar correctamente en el if
+ultimo_caracter= frase[-1].lower() 
 
-# if ultimo_caracter == "a" or ultimo_caracter == "e" or ultimo_caracter == "i" or ultimo_caracter == "o" or ultimo_caracter == "u":
-#     print(frase+"!")
-# else:
-#     print(frase)
+# con frase[-1] obtenemos el ultimo caracter de la y utilizamos el metodo .lower() para pasar la cadena a minúsculas a fin de comparar correctamente en el if
+
+if ultimo_caracter == "a" or ultimo_caracter == "e" or ultimo_caracter == "i" or ultimo_caracter == "o" or ultimo_caracter == "u":
+    print(frase+"!")
+else:
+    print(frase)
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -123,24 +137,26 @@
 # 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
 # El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(), lower() y title() de Python para convertir entre mayúsculas y minúsculas.
 
-# nombre = str(input("Ingrese su nombre:"))
+print("Ejercicio 8")
 
-# print("""Elija una de las siguientes opciones
-# =======================================================
-# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
-# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
-# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.""")
+nombre = str(input("Ingrese su nombre:"))
 
-# opcion = int(input("Ingrese la opcion:"))
+print("""Elija una de las siguientes opciones
+=======================================================
+1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
+2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
+3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.""")
 
-# if opcion == 1:
-#     print(nombre.upper())
-# elif opcion == 2:
-#     print(nombre.lower())
-# elif opcion == 3:
-#     print(nombre.title())
-# else:
-#     print("Ingrese una opcion válida.")
+opcion = int(input("Ingrese la opcion:"))
+
+if opcion == 1:
+    print(nombre.upper())
+elif opcion == 2:
+    print(nombre.lower())
+elif opcion == 3:
+    print(nombre.title())
+else:
+    print("Ingrese una opcion válida.")
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -152,20 +168,22 @@
 # ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
 # ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
 
-# magnitud = float(input("Ingrese la magnitud del terremoto segun la escala de Richter:"))
+print("Ejercicio 9")
 
-# if magnitud < 3:
-#     print(f"Terremoto escala {magnitud}, es Muy leve (imperceptible)")
-# elif 3 <= magnitud < 4:
-#     print(f"Terremoto escala {magnitud}, es Leve (ligeramente perceptible)")
-# elif 4 <= magnitud < 5:
-#     print(f"Terremoto escala {magnitud}, es Moderado (sentido por personas, pero generalmente no causa daños)")
-# elif 5 <= magnitud < 6:
-#     print(f"Terremoto escala {magnitud}, es Fuerte (puede causar daños en estructuras débiles)")
-# elif 6 <= magnitud < 7:
-#     print(f"Terremoto escala {magnitud}, es Muy Fuerte (puede causar daños significativos)")
-# elif magnitud >= 7:
-#     print(f"Terremoto escala {magnitud}, es Extremo (puede causar graves daños a gran escala)")
+magnitud = float(input("Ingrese la magnitud del terremoto segun la escala de Richter:"))
+
+if magnitud < 3:
+    print(f"Terremoto escala {magnitud}, es Muy leve (imperceptible)")
+elif 3 <= magnitud < 4:
+    print(f"Terremoto escala {magnitud}, es Leve (ligeramente perceptible)")
+elif 4 <= magnitud < 5:
+    print(f"Terremoto escala {magnitud}, es Moderado (sentido por personas, pero generalmente no causa daños)")
+elif 5 <= magnitud < 6:
+    print(f"Terremoto escala {magnitud}, es Fuerte (puede causar daños en estructuras débiles)")
+elif 6 <= magnitud < 7:
+    print(f"Terremoto escala {magnitud}, es Muy Fuerte (puede causar daños significativos)")
+elif magnitud >= 7:
+    print(f"Terremoto escala {magnitud}, es Extremo (puede causar graves daños a gran escala)")
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -191,6 +209,8 @@
 # --------------------------------------------------------------------------------------------------|
 
 # Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+print("Ejercicio 10")
 
 hemisferio = str(input("Ingrese el hemisferio donde se encuentra (Norte=N o Sur=S):")).upper()
 mes = int(input("Ingrese el mes del año actual con numeros (1.Enero,2.Febrero,3.Marzo,4.Abril,5.Mayo,6.Junio,7.Julio,8.Agosto,9.Septiembre,10.Octubre,11.Noviembre,12.Diciembre):"))
