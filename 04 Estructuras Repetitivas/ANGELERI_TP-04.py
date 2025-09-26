@@ -85,14 +85,24 @@
 
 #6) Desarrolla un programa que imprima en pantalla todos los números pares comprendidos entre 0 y 100, en orden decreciente.
 
-for num in range(100,-1,-1):
-    if num % 2 == 0:
-        print(num)
-
+# for num in range(100,-1,-1):
+#     if num % 2 == 0:
+#         print(num)
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un número entero positivo indicado por el usuario.
+num_valido=False
+suma=0
+while not num_valido:
+    num_positivo = int(input("Ingrese un número positivo: "))
+    if num_positivo > 0:
+        num_valido= True
+        for i in range(0,num_positivo+1):
+            suma = suma + i
+    else:
+        print("Número Inválido.Ingrese un número positivo")
+print(f"La suma entre los números comprendido desde 0 hasta {num_positivo} es {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
