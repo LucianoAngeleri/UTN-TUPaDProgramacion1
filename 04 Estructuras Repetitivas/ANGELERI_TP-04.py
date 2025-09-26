@@ -6,25 +6,39 @@
 #-----------------------------------------------------------------------------------------------------------------
 
 #2) Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de dígitos que contiene.
-num = int(input("Ingrese un número entero para determinar la cantidad de dígitos: "))
-cant_digitos = 0
-digito = num
+# num = int(input("Ingrese un número entero para determinar la cantidad de dígitos: "))
+# cant_digitos = 0
+# digito = num
 
-if num == 0:
-    cant_digitos = 1
-elif num > 0:
-    while digito > 0:
-        digito = digito // 10
-        cant_digitos +=1
+# if num == 0:
+#     cant_digitos = 1
+# elif num > 0:
+#     while digito > 0:
+#         digito = digito // 10
+#         cant_digitos +=1
 
-if num >= 0:
-    print(f"El número {num} tiene {cant_digitos} dígitos")
-else:
-    print("Ingrese un número entero válido")
-    
+# if num >= 0:
+#     print(f"El número {num} tiene {cant_digitos} dígitos")
+# else:
+#     print("Ingrese un número entero válido")
+
 #-----------------------------------------------------------------------------------------------------------------
 
 #3) Escribe un programa que sume todos los números enteros comprendidos entre dos valores dados por el usuario, excluyendo esos dos valores.
+
+num1 = int(input("Ingrese el primer número entero: "))
+num2 = int(input("Ingrese segundo número entero: "))
+suma = 0
+if num1 < 0 or num2 < 0:
+    print("Ingrese un número válido")
+else:
+    if num1 > num2:
+        for contador in range(num2+1,num1):
+            suma = suma + contador
+    elif num1 < num2:
+        for contador in range(num1+1,num2):
+            suma = suma + contador
+    print(f"La suma de los números comprendidos entre {num1} y {num2} es {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
