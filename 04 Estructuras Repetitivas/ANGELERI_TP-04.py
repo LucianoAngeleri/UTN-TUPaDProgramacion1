@@ -138,13 +138,26 @@
 
 #9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe poder procesar 100 números cambiando solo un valor).
 
-limite = 5 
-suma = 0
-for i in range(1,limite+1):
-    num = int(input(f"{i}- Ingrese un número entero: "))
-    suma = suma + num
-print(f"La media de los números ingresados es: {suma/limite}")
+# limite = 5 
+# suma = 0
+# for i in range(1,limite+1):
+#     num = int(input(f"{i}- Ingrese un número entero: "))
+#     suma = suma + num
+# print(f"La media de los números ingresados es: {suma/limite}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #10) Escribe un programa que invierta el orden de los dígitos de un número ingresado por el usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745.
+
+num = int(input("Ingrese un número para invertir el orden de sus dígitos: "))
+
+num_sin_invertir = num
+num_invertido = 0
+
+while num > 0:
+    digito = num % 10
+    num_invertido = num_invertido * 10 + digito
+    num = num // 10
+
+print(f"Número original: {num_sin_invertir}")
+print(f"Número invertido: {num_invertido}")
