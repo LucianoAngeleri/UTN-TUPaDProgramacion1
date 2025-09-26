@@ -26,23 +26,31 @@
 
 #3) Escribe un programa que sume todos los números enteros comprendidos entre dos valores dados por el usuario, excluyendo esos dos valores.
 
-num1 = int(input("Ingrese el primer número entero: "))
-num2 = int(input("Ingrese segundo número entero: "))
-suma = 0
-if num1 < 0 or num2 < 0:
-    print("Ingrese un número válido")
-else:
-    if num1 > num2:
-        for contador in range(num2+1,num1):
-            suma = suma + contador
-    elif num1 < num2:
-        for contador in range(num1+1,num2):
-            suma = suma + contador
-    print(f"La suma de los números comprendidos entre {num1} y {num2} es {suma}")
+# num1 = int(input("Ingrese el primer número entero: "))
+# num2 = int(input("Ingrese segundo número entero: "))
+# suma = 0
+# if num1 < 0 or num2 < 0:
+#     print("Ingrese un número válido")
+# else:
+#     if num1 > num2:
+#         for contador in range(num2+1,num1):
+#             suma = suma + contador
+#     elif num1 < num2:
+#         for contador in range(num1+1,num2):
+#             suma = suma + contador
+#     print(f"La suma de los números comprendidos entre {num1} y {num2} es {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #4) Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia. El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0.
+
+numero = int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
+suma=0
+while numero != 0:
+    suma = suma + numero
+    numero=int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
+print("La suma se detuvo.")
+print(f"La suma total es: {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
