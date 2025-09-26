@@ -17,15 +17,16 @@ digito = num
 
 if num == 0:
     cant_digitos = 1
-elif num > 0:
+else:
+    if num < 0:
+        digito = abs(num)
+    else:
+        digito = num
     while digito > 0:
         digito = digito // 10
         cant_digitos +=1
-
-if num >= 0:
-    print(f"El número {num} tiene {cant_digitos} dígitos")
-else:
-    print("Ingrese un número entero válido")
+        
+print(f"El número {num} tiene {cant_digitos} dígitos")
 
 #-----------------------------------------------------------------------------------------------------------------
 
