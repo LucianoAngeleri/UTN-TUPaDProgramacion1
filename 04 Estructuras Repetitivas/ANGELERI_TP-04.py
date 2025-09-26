@@ -1,11 +1,27 @@
 # 1) Crea un programa que imprima en pantalla todos los números enteros desde 0 hasta 100 (incluyendo ambos extremos), en orden creciente, mostrando un número por línea.
-for contador in range(0,101):
-    print(contador)
+
+# for contador in range(0,101):
+#     print(contador)
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #2) Desarrolla un programa que solicite al usuario un número entero y determine la cantidad de dígitos que contiene.
+num = int(input("Ingrese un número entero para determinar la cantidad de dígitos: "))
+cant_digitos = 0
+digito = num
 
+if num == 0:
+    cant_digitos = 1
+elif num > 0:
+    while digito > 0:
+        digito = digito // 10
+        cant_digitos +=1
+
+if num >= 0:
+    print(f"El número {num} tiene {cant_digitos} dígitos")
+else:
+    print("Ingrese un número entero válido")
+    
 #-----------------------------------------------------------------------------------------------------------------
 
 #3) Escribe un programa que sume todos los números enteros comprendidos entre dos valores dados por el usuario, excluyendo esos dos valores.
