@@ -107,36 +107,43 @@
 #-----------------------------------------------------------------------------------------------------------------
 
 #8) Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad menor, pero debe estar preparado para procesar 100 números con un solo cambio).
-limite=100
+# limite=100
 
-cant_num_par=0
-cant_num_impar=0
-cant_num_positivo=0
-cant_num_negativo=0
-cant_ceros=0
+# cant_num_par=0
+# cant_num_impar=0
+# cant_num_positivo=0
+# cant_num_negativo=0
+# cant_ceros=0
 
-for i in range (1,limite+1):
-    num = int(input(f"{i}- Ingrese un número entero: "))
-    if num % 2 ==0:
-      cant_num_par +=1
-    else:
-      cant_num_impar +=1
-    if num > 0:
-        cant_num_positivo += 1
-    elif num < 0:
-        cant_num_negativo += 1
-    else:
-       cant_ceros += 1
+# for i in range (1,limite+1):
+#     num = int(input(f"{i}- Ingrese un número entero: "))
+#     if num % 2 ==0:
+#       cant_num_par +=1
+#     else:
+#       cant_num_impar +=1
+#     if num > 0:
+#         cant_num_positivo += 1
+#     elif num < 0:
+#         cant_num_negativo += 1
+#     else:
+#        cant_ceros += 1
 
-print(f"Cantidad de números pares ingresados: {cant_num_par}")
-print(f"Cantidad de números impares ingresados: {cant_num_impar}")
-print(f"Cantidad de números positivos ingresados: {cant_num_positivo}")
-print(f"Cantidad de números negativos ingresados: {cant_num_negativo}")
-print(f"Cantidad de ceros: {cant_ceros}")
+# print(f"Cantidad de números pares ingresados: {cant_num_par}")
+# print(f"Cantidad de números impares ingresados: {cant_num_impar}")
+# print(f"Cantidad de números positivos ingresados: {cant_num_positivo}")
+# print(f"Cantidad de números negativos ingresados: {cant_num_negativo}")
+# print(f"Cantidad de ceros: {cant_ceros}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe poder procesar 100 números cambiando solo un valor).
+
+limite = 5 
+suma = 0
+for i in range(1,limite+1):
+    num = int(input(f"{i}- Ingrese un número entero: "))
+    suma = suma + num
+print(f"La media de los números ingresados es: {suma/limite}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
