@@ -25,7 +25,7 @@ else:
     while digito > 0:
         digito = digito // 10
         cant_digitos +=1
-        
+
 print(f"El número {num} tiene {cant_digitos} dígitos")
 
 #-----------------------------------------------------------------------------------------------------------------
@@ -37,17 +37,18 @@ print("Ejercicio N°3")
 num1 = int(input("Ingrese el primer número entero: "))
 num2 = int(input("Ingrese segundo número entero: "))
 suma = 0
-
-if num1 < 0 or num2 < 0:
-    print("Ingrese un número válido")
+if num1 == num2:
+  suma=0
 else:
     if num1 > num2:
         for contador in range(num2+1,num1):
             suma = suma + contador
-    elif num1 < num2:
+    else:
         for contador in range(num1+1,num2):
             suma = suma + contador
-    print(f"La suma de los números comprendidos entre {num1} y {num2} es {suma}")
+        
+print(f"La suma de los números comprendidos entre {num1} y {num2} es {suma}")
+
 
 #-----------------------------------------------------------------------------------------------------------------
 
