@@ -55,35 +55,40 @@
 #-----------------------------------------------------------------------------------------------------------------
 
 #5) Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
-import random
+# import random
 
-num_aleatorio = random.randint(0, 9)
-num_adivinado = False
-intentos=0
+# num_aleatorio = random.randint(0, 9)
+# num_adivinado = False
+# intentos=0
 
-print("Debes adivinar un número entre 0 y 9 para ganar")
+# print("Debes adivinar un número entre 0 y 9 para ganar")
 
-while not num_adivinado:
-    intentos +=1
-    num_valido = False
+# while not num_adivinado:
+#     intentos +=1
+#     num_valido = False
 
-    while not num_valido:
-        num_usuario= int(input("Ingrese un número entre 0 y 9: "))
-        if 0 <= num_usuario <= 9:
-            num_valido = True
-        else:
-            print("Número no válido.") 
+#     while not num_valido:
+#         num_usuario= int(input("Ingrese un número entre 0 y 9: "))
+#         if 0 <= num_usuario <= 9:
+#             num_valido = True
+#         else:
+#             print("Número no válido.") 
    
-    if  num_usuario == num_aleatorio:
-        num_adivinado = True 
-    else:
-        print("Te equivocaste de número")
+#     if  num_usuario == num_aleatorio:
+#         num_adivinado = True 
+#     else:
+#         print("Te equivocaste de número")
 
-print(f"Ganaste, adivinaste el numero en {intentos} intento/s")
+# print(f"Ganaste, adivinaste el numero en {intentos} intento/s")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #6) Desarrolla un programa que imprima en pantalla todos los números pares comprendidos entre 0 y 100, en orden decreciente.
+
+for num in range(100,-1,-1):
+    if num % 2 == 0:
+        print(num)
+
 
 #-----------------------------------------------------------------------------------------------------------------
 
