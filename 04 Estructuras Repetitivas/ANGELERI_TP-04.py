@@ -92,21 +92,47 @@
 #-----------------------------------------------------------------------------------------------------------------
 
 #7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un número entero positivo indicado por el usuario.
-num_valido=False
-suma=0
-while not num_valido:
-    num_positivo = int(input("Ingrese un número positivo: "))
-    if num_positivo > 0:
-        num_valido= True
-        for i in range(0,num_positivo+1):
-            suma = suma + i
-    else:
-        print("Número Inválido.Ingrese un número positivo")
-print(f"La suma entre los números comprendido desde 0 hasta {num_positivo} es {suma}")
+# num_valido=False
+# suma=0
+# while not num_valido:
+#     num_positivo = int(input("Ingrese un número positivo: "))
+#     if num_positivo > 0:
+#         num_valido= True
+#         for i in range(0,num_positivo+1):
+#             suma = suma + i
+#     else:
+#         print("Número Inválido.Ingrese un número positivo")
+# print(f"La suma entre los números comprendido desde 0 hasta {num_positivo} es {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #8) Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad menor, pero debe estar preparado para procesar 100 números con un solo cambio).
+limite=100
+
+cant_num_par=0
+cant_num_impar=0
+cant_num_positivo=0
+cant_num_negativo=0
+cant_ceros=0
+
+for i in range (1,limite+1):
+    num = int(input(f"{i}- Ingrese un número entero: "))
+    if num % 2 ==0:
+      cant_num_par +=1
+    else:
+      cant_num_impar +=1
+    if num > 0:
+        cant_num_positivo += 1
+    elif num < 0:
+        cant_num_negativo += 1
+    else:
+       cant_ceros += 1
+
+print(f"Cantidad de números pares ingresados: {cant_num_par}")
+print(f"Cantidad de números impares ingresados: {cant_num_impar}")
+print(f"Cantidad de números positivos ingresados: {cant_num_positivo}")
+print(f"Cantidad de números negativos ingresados: {cant_num_negativo}")
+print(f"Cantidad de ceros: {cant_ceros}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
