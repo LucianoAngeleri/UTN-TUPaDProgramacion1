@@ -44,17 +44,42 @@
 
 #4) Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia. El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0.
 
-numero = int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
-suma=0
-while numero != 0:
-    suma = suma + numero
-    numero=int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
-print("La suma se detuvo.")
-print(f"La suma total es: {suma}")
+# numero = int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
+# suma=0
+# while numero != 0:
+#     suma = suma + numero
+#     numero=int(input("Ingrese un número para sumar en secuencia o ingrese 0 para detener la suma: "))
+# print("La suma se detuvo.")
+# print(f"La suma total es: {suma}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #5) Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final, el programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+import random
+
+num_aleatorio = random.randint(0, 9)
+num_adivinado = False
+intentos=0
+
+print("Debes adivinar un número entre 0 y 9 para ganar")
+
+while not num_adivinado:
+    intentos +=1
+    num_valido = False
+
+    while not num_valido:
+        num_usuario= int(input("Ingrese un número entre 0 y 9: "))
+        if 0 <= num_usuario <= 9:
+            num_valido = True
+        else:
+            print("Número no válido.") 
+   
+    if  num_usuario == num_aleatorio:
+        num_adivinado = True 
+    else:
+        print("Te equivocaste de número")
+
+print(f"Ganaste, adivinaste el numero en {intentos} intento/s")
 
 #-----------------------------------------------------------------------------------------------------------------
 
