@@ -3,6 +3,27 @@
 # • Calcular y mostrar el promedio.
 # • Indicar la nota más alta y la más baja.
 
+print("Ejercicio 1")
+
+notas =[8.5, 7.0, 9.2, 6.5, 8.0, 7.5, 9.0, 5.5, 8.8, 7.2]
+
+suma_notas = 0
+nota_max=0.0
+nota_min=100.0
+
+print("Lista de notas:")
+for nota in range(len(notas)):
+    print(f"Estudiante({nota+1}): {notas[nota]}")
+    suma_notas += notas[nota]
+    if notas[nota] > nota_max:
+        nota_max = notas[nota]
+    if notas[nota] < nota_min:
+        nota_min=notas[nota]
+ 
+print("El promedio de notas es: ", suma_notas/len(notas))
+print("La nota máxima es:", nota_max)
+print("La nota mínima es:", nota_min) 
+
 #-----------------------------------------------------------------------------------------------------------------
 
 #2) Pedir al usuario que cargue 5 productos en una lista.
