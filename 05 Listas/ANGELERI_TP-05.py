@@ -63,38 +63,39 @@
 # • Crear una lista con los pares y otra con los impares.
 # • Mostrar cuántos números tiene cada lista
 
-import random
+# print("Ejercicio 3")
 
-cant_num_random =15
-lista_num_random =[]
-lista_num_pares =  []
-lista_num_impares =  []
+# import random
+
+# cant_num_random =15
+# lista_num_random =[]
+# lista_num_pares =  []
+# lista_num_impares =  []
 
 
-for num in range (cant_num_random):
-    numero_random = random.randint(1,100)
-    lista_num_random.append(numero_random)
+# for num in range (cant_num_random):
+#     numero_random = random.randint(1,100)
+#     lista_num_random.append(numero_random)
 
-for num in lista_num_random:
-    if num % 2 == 0:
-        lista_num_pares.append(num)
-    else:
-        lista_num_impares.append(num)
+# for num in lista_num_random:
+#     if num % 2 == 0:
+#         lista_num_pares.append(num)
+#     else:
+#         lista_num_impares.append(num)
 
-print(f"Números originales ({len(lista_num_random)} elementos):")
-for num_random in lista_num_random:
-    print(num_random, end=" ")
-print()
+# print(f"Números originales ({len(lista_num_random)} elementos):")
+# for num_random in lista_num_random:
+#     print(num_random, end=" ")
+# print()
 
-print(f"Números pares ({len(lista_num_pares)} elementos):")
-for num_par in lista_num_pares:
-    print(num_par, end=" ")
-print()
+# print(f"Números pares ({len(lista_num_pares)} elementos):")
+# for num_par in lista_num_pares:
+#     print(num_par, end=" ")
+# print()
 
-print(f"Números impares ({len(lista_num_impares)} elementos):")
-for num_impar in lista_num_impares:
-    print(num_impar, end=" ")
-
+# print(f"Números impares ({len(lista_num_impares)} elementos):")
+# for num_impar in lista_num_impares:
+#     print(num_impar, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +103,23 @@ for num_impar in lista_num_impares:
 # datos=[1,3,5,3,7,1,9,5,3]
 # • Crear una nueva lista sin elementos repetidos.
 # • Mostrar el resultado.
+
+print("Ejercicio 3")
+datos=[1,3,5,3,7,1,9,5,3]
+datos_sin_repetir =[]
+
+for dato in datos:
+    if dato not in datos_sin_repetir:
+        datos_sin_repetir.append(dato)
+
+print("Lista original:")
+for dato in datos:
+    print(dato, end=" ")
+print()
+
+print("Lista sin datos repetidos:")
+for dato in datos_sin_repetir:
+    print(dato, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
