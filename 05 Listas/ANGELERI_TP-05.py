@@ -30,36 +30,71 @@
 # • Mostrar la lista ordenada alfabéticamente. Investigue el uso del método sorted().
 # • Preguntar al usuario qué producto desea eliminar y actualizar la lista.
 
-print("Ejercicio 2")
-lista_productos =["","","","",""]
-lista_productos_ordenados = []
-producto_eliminar = ""
+# print("Ejercicio 2")
 
-for producto in range(len(lista_productos)):
-    lista_productos[producto] = str(input(f"{producto+1} - Ingrese el nombre de un producto:"))
+# print("Ejercicio 2")
+# lista_productos =["","","","",""]
+# lista_productos_ordenados = []
+# producto_eliminar = ""
 
-lista_productos_ordenados = sorted(lista_productos)
+# for producto in range(len(lista_productos)):
+#     lista_productos[producto] = str(input(f"{producto+1} - Ingrese el nombre de un producto:"))
 
-print("Lista de productos original:")
-for producto in range(len(lista_productos)):
-    print(f"Producto({producto+1}): {lista_productos[producto]}")
-print("Lista de productos ordenados alfabeticamente:")
-for producto in range(len(lista_productos_ordenados)):
-    print(f"Producto({producto+1}): {lista_productos_ordenados[producto]}")
+# lista_productos_ordenados = sorted(lista_productos)
 
-producto_eliminar= str(input("Qué producto desea eliminar? Ingrese el nombre del producto: "))
-if producto_eliminar in lista_productos:
-  lista_productos.remove(producto_eliminar)
-  print(f"El producto {producto_eliminar} ha sido eliminado correctamente")
-  print("Lista actualizada:", lista_productos)
-else:
-  print(f"El producto '{producto_eliminar}' no se encontró en la lista")
+# print("Lista de productos original:")
+# for producto in range(len(lista_productos)):
+#     print(f"Producto({producto+1}): {lista_productos[producto]}")
+# print("Lista de productos ordenados alfabeticamente:")
+# for producto in range(len(lista_productos_ordenados)):
+#     print(f"Producto({producto+1}): {lista_productos_ordenados[producto]}")
+
+# producto_eliminar= str(input("Qué producto desea eliminar? Ingrese el nombre del producto: "))
+# if producto_eliminar in lista_productos:
+#   lista_productos.remove(producto_eliminar)
+#   print(f"El producto {producto_eliminar} ha sido eliminado correctamente")
+#   print("Lista actualizada:", lista_productos)
+# else:
+#   print(f"El producto '{producto_eliminar}' no se encontró en la lista")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #3)Generar una lista con 15 números enteros al azar entre 1 y 100.
 # • Crear una lista con los pares y otra con los impares.
 # • Mostrar cuántos números tiene cada lista
+
+import random
+
+cant_num_random =15
+lista_num_random =[]
+lista_num_pares =  []
+lista_num_impares =  []
+
+
+for num in range (cant_num_random):
+    numero_random = random.randint(1,100)
+    lista_num_random.append(numero_random)
+
+for num in lista_num_random:
+    if num % 2 == 0:
+        lista_num_pares.append(num)
+    else:
+        lista_num_impares.append(num)
+
+print(f"Números originales ({len(lista_num_random)} elementos):")
+for num_random in lista_num_random:
+    print(num_random, end=" ")
+print()
+
+print(f"Números pares ({len(lista_num_pares)} elementos):")
+for num_par in lista_num_pares:
+    print(num_par, end=" ")
+print()
+
+print(f"Números impares ({len(lista_num_impares)} elementos):")
+for num_impar in lista_num_impares:
+    print(num_impar, end=" ")
+
 
 #-----------------------------------------------------------------------------------------------------------------
 
