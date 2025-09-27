@@ -104,28 +104,64 @@
 # • Crear una nueva lista sin elementos repetidos.
 # • Mostrar el resultado.
 
-print("Ejercicio 3")
-datos=[1,3,5,3,7,1,9,5,3]
-datos_sin_repetir =[]
+# print("Ejercicio 4")
 
-for dato in datos:
-    if dato not in datos_sin_repetir:
-        datos_sin_repetir.append(dato)
+# datos=[1,3,5,3,7,1,9,5,3]
+# datos_sin_repetir =[]
 
-print("Lista original:")
-for dato in datos:
-    print(dato, end=" ")
-print()
+# for dato in datos:
+#     if dato not in datos_sin_repetir:
+#         datos_sin_repetir.append(dato)
 
-print("Lista sin datos repetidos:")
-for dato in datos_sin_repetir:
-    print(dato, end=" ")
+# print("Lista original:")
+# for dato in datos:
+#     print(dato, end=" ")
+# print()
+
+# print("Lista sin datos repetidos:")
+# for dato in datos_sin_repetir:
+#     print(dato, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #5)Crear una lista con los nombres de 8 estudiantes presentes en clase.
 # • Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
 # • Mostrar la lista final actualizada.
+
+print("Ejercicio N°5")
+
+estudiantes = ["Luciano", "Carlos", "María", "Juan", "Lucía", "Iván", "Sofía", "Diego"]
+
+print("Lista estudiantes presentes:")
+for estudiante in estudiantes:
+    print(estudiante, end=" ")
+
+print("Desea añadir un nuevo estudiante o eliminar uno existente?")
+while True:
+    op = input("Presione: (A)-Añadir o (E)-Eliminar: ").upper()
+    
+    if op == "A" or op == "E":
+        break 
+    else:
+        print("Opción incorrecta. Por favor ingrese 'A' para añadir o 'E' para eliminar.")
+
+if op == "A":
+    nuevo_estudiante = str(input("Ingrese el nombre del nuevo estudiante: "))
+    estudiantes.append(nuevo_estudiante)
+    print(f"Se agregó a {nuevo_estudiante}")
+elif op == "E":
+    eliminar_estudiante = str(input("Ingrese el nombre del estudiante a eliminar: "))
+    if eliminar_estudiante in estudiantes:
+        estudiantes.remove(eliminar_estudiante)
+        print(f"Se eliminó a {eliminar_estudiante}")
+    else:
+      print(f"No se encontró a {eliminar_estudiante}")
+else:
+    print("Ingrese una opcion correcta")
+
+print("Lista estudiantes presentes(modificada):")
+for estudiante in estudiantes:
+    print(estudiante, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
