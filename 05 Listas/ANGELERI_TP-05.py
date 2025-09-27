@@ -128,44 +128,61 @@
 # • Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
 # • Mostrar la lista final actualizada.
 
-print("Ejercicio N°5")
+# print("Ejercicio N°5")
 
-estudiantes = ["Luciano", "Carlos", "María", "Juan", "Lucía", "Iván", "Sofía", "Diego"]
+# estudiantes = ["Luciano", "Carlos", "María", "Juan", "Lucía", "Iván", "Sofía", "Diego"]
 
-print("Lista estudiantes presentes:")
-for estudiante in estudiantes:
-    print(estudiante, end=" ")
+# print("Lista estudiantes presentes:")
+# for estudiante in estudiantes:
+#     print(estudiante, end=" ")
 
-print("Desea añadir un nuevo estudiante o eliminar uno existente?")
-while True:
-    op = input("Presione: (A)-Añadir o (E)-Eliminar: ").upper()
+# print("Desea añadir un nuevo estudiante o eliminar uno existente?")
+# while True:
+#     op = input("Presione: (A)-Añadir o (E)-Eliminar: ").upper()
     
-    if op == "A" or op == "E":
-        break 
-    else:
-        print("Opción incorrecta. Por favor ingrese 'A' para añadir o 'E' para eliminar.")
+#     if op == "A" or op == "E":
+#         break 
+#     else:
+#         print("Opción incorrecta. Por favor ingrese 'A' para añadir o 'E' para eliminar.")
 
-if op == "A":
-    nuevo_estudiante = str(input("Ingrese el nombre del nuevo estudiante: "))
-    estudiantes.append(nuevo_estudiante)
-    print(f"Se agregó a {nuevo_estudiante}")
-elif op == "E":
-    eliminar_estudiante = str(input("Ingrese el nombre del estudiante a eliminar: "))
-    if eliminar_estudiante in estudiantes:
-        estudiantes.remove(eliminar_estudiante)
-        print(f"Se eliminó a {eliminar_estudiante}")
-    else:
-      print(f"No se encontró a {eliminar_estudiante}")
-else:
-    print("Ingrese una opcion correcta")
+# if op == "A":
+#     nuevo_estudiante = str(input("Ingrese el nombre del nuevo estudiante: "))
+#     estudiantes.append(nuevo_estudiante)
+#     print(f"Se agregó a {nuevo_estudiante}")
+# elif op == "E":
+#     eliminar_estudiante = str(input("Ingrese el nombre del estudiante a eliminar: "))
+#     if eliminar_estudiante in estudiantes:
+#         estudiantes.remove(eliminar_estudiante)
+#         print(f"Se eliminó a {eliminar_estudiante}")
+#     else:
+#       print(f"No se encontró a {eliminar_estudiante}")
+# else:
+#     print("Ingrese una opcion correcta")
 
-print("Lista estudiantes presentes(modificada):")
-for estudiante in estudiantes:
-    print(estudiante, end=" ")
+# print("Lista estudiantes presentes(modificada):")
+# for estudiante in estudiantes:
+#     print(estudiante, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #6)Dada una lista con 7 números, rotar todos los elementos una posición hacia la derecha (el último pasa a ser el primero).
+
+# print("Ejercicio N°6")
+
+lista_num=[1,3,5,6,7,2,9]
+nueva_lista_num =[]
+
+print(f"Lista original: {lista_num}")
+
+ultimo_elemento = lista_num[-1]
+nueva_lista_num = [ultimo_elemento]
+
+for num in range(len(lista_num) - 1):
+    nueva_lista_num.append(lista_num[num])
+
+print("Lista rotada hacia la derecha:")
+for numero in nueva_lista_num:
+    print(numero, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
