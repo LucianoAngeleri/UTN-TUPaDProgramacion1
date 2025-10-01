@@ -192,52 +192,50 @@
 
 # print("Ejercicio N°7")
 
-temperaturas =[ [15,21],
-                [15,25],
-                [15,28],
-                [16,34],
-                [19,35],
-                [18,30],
-                [14,21]]
-temp_max =0
-temp_min=100
-temp_max_suma=0
-temp_min_suma=0
-temp_max_promedio=0
-temp_min_promedio=0
-dia_amplitud=0
-amplitud_max=0
-dia_amplitud_max=0
+# temperaturas =[ [15,21],
+#                 [15,25],
+#                 [15,28],
+#                 [16,34],
+#                 [19,35],
+#                 [18,30],
+#                 [14,21]]
+# temp_max =0
+# temp_min=100
+# temp_max_suma=0
+# temp_min_suma=0
+# temp_max_promedio=0
+# temp_min_promedio=0
+# dia_amplitud=0
+# amplitud_max=0
+# dia_amplitud_max=0
 
-for dia in range(len(temperaturas)):
+# for dia in range(len(temperaturas)):
 
-    if temperaturas[dia][1] > temp_max:
-        temp_max = temperaturas[dia][1]
+#     if temperaturas[dia][1] > temp_max:
+#         temp_max = temperaturas[dia][1]
 
-    if temperaturas[dia][0] < temp_min:
-        temp_min = temperaturas[dia][0]
+#     if temperaturas[dia][0] < temp_min:
+#         temp_min = temperaturas[dia][0]
 
-    temp_max_suma += temperaturas[dia][1]
-    temp_min_suma += temperaturas[dia][0]
+#     temp_max_suma += temperaturas[dia][1]
+#     temp_min_suma += temperaturas[dia][0]
 
-    amplitud_dia= temperaturas[dia][1] - temperaturas[dia][0]
+#     amplitud_dia= temperaturas[dia][1] - temperaturas[dia][0]
 
-    if amplitud_dia > amplitud_max:
-        amplitud_max = amplitud_dia
-        dia_amplitud_max = dia
-    print(f"Día {dia+1}")
-    print(f"Temp. Mínima: {temperaturas[dia][0]}°C")
-    print(f"Temp. Máxima: {temperaturas[dia][1]}°C")
-    print(f"Amplitud térmica: {amplitud_dia}°C")
+#     if amplitud_dia > amplitud_max:
+#         amplitud_max = amplitud_dia
+#         dia_amplitud_max = dia
+#     print(f"Día {dia+1}")
+#     print(f"Temp. Mínima: {temperaturas[dia][0]}°C")
+#     print(f"Temp. Máxima: {temperaturas[dia][1]}°C")
+#     print(f"Amplitud térmica: {amplitud_dia}°C")
 
-temp_max_promedio = temp_max_suma / len(temperaturas)
-temp_min_promedio = temp_min_suma / len(temperaturas)
-print(f"------------------------------------------------")
-print(f"Temperatura máxima promedio: {temp_max_promedio}°C")
-print(f"Temperatura mínima promedio: {temp_min_promedio}°C")
-print(f"Amplitud máxima registrada: {amplitud_max}°C en el día {dia_amplitud_max + 1}")
-
-
+# temp_max_promedio = temp_max_suma / len(temperaturas)
+# temp_min_promedio = temp_min_suma / len(temperaturas)
+# print(f"------------------------------------------------")
+# print(f"Temperatura máxima promedio: {temp_max_promedio}°C")
+# print(f"Temperatura mínima promedio: {temp_min_promedio}°C")
+# print(f"Amplitud máxima registrada: {amplitud_max}°C en el día {dia_amplitud_max + 1}")
 
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -251,8 +249,174 @@ print(f"Amplitud máxima registrada: {amplitud_max}°C en el día {dia_amplitud_
 # • Inicializarlo con guiones "-" representando casillas vacías.
 # • Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O".
 # • Mostrar el tablero después de cada jugada.
- 
 
+print("Ejercicio N°9")
+
+tablero=[["-","-","-"],
+         ["-","-","-"],
+        ["-","-","-"]]
+juego_terminado = False
+turno = "X"
+movimientos_realizados = 0
+while juego_terminado != True:
+    print("""
+1 | 2 | 3 
+==+===+===
+ 4 | 5 | 6 
+==+===+===
+7 | 8 | 9 
+          """)
+
+    posicion_valida = False
+
+    for fila in range(len(tablero)):
+        for columna in range(len(tablero[fila])):
+            celda = tablero[fila][columna]
+            print(celda, end=" ")
+            if columna < len(tablero[fila]) - 1:
+                print("|", end=" ")
+        print()
+        if fila < len(tablero) - 1:
+            print("==+===+===")
+
+    while posicion_valida != True:
+        
+        jugador_posicion_str = input(f"Jugador ({turno}) - Ingrese la posición (1-9) donde desea colocar su marca: ")
+
+        if jugador_posicion_str.isdigit():
+
+            jugador_posicion = int(jugador_posicion_str)
+
+            if jugador_posicion >= 1 and jugador_posicion <= 9:
+                match jugador_posicion:
+                    case 1:
+                        if tablero[0][0] == "-":
+                            tablero[0][0] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 2:
+                        if tablero[0][1] == "-":
+                            tablero[0][1] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue             
+                    case 3:
+                        if tablero[0][2] == "-":
+                            tablero[0][2] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 4:
+                        if tablero[1][0] == "-":
+                            tablero[1][0] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 5:
+                        if tablero[1][1] == "-":
+                            tablero[1][1] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 6:
+                        if tablero[1][2] == "-":
+                            tablero[1][2] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 7:
+                        if tablero[2][0] == "-":
+                            tablero[2][0] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 8:
+                        if tablero[2][1] == "-":
+                            tablero[2][1] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue                
+                    case 9:
+                        if tablero[2][2] == "-":
+                            tablero[2][2] = turno
+                            break
+                        else:
+                            print("La posición ya está ocupada. Intente nuevamente.")
+                            continue
+                posicion_valida = True
+            else:
+                print("Posición inválida. Ingrese un número entre 1 y 9.")
+        else:
+            print("Entrada inválida. Por favor, ingrese un número .")
+
+    movimientos_realizados += 1
+
+    victoria = False
+
+    marca = turno
+
+    if (tablero[0][0] == marca and tablero[0][1] == marca and tablero[0][2] == marca):
+        victoria = True
+    elif (tablero[1][0] == marca and tablero[1][1] == marca and tablero[1][2] == marca):
+        victoria = True
+    elif (tablero[2][0] == marca and tablero[2][1] == marca and tablero[2][2] == marca) :
+        victoria = True
+
+    # B. ColuTnas
+    elif (tablero[0][0] == marca and tablero[1][0] == marca and tablero[2][0] == marca) :
+        victoria = True
+    elif (tablero[0][1] == marca and tablero[1][1] == marca and tablero[2][1] == marca) :
+        victoria = True
+    elif (tablero[0][2] == marca and tablero[1][2] == marca and tablero[2][2] == marca) :
+        victoria = True
+
+    # C. Diagonales
+    elif (tablero[0][0] == marca and tablero[1][1] == marca and tablero[2][2] == marca) : 
+        victoria = True
+    elif (tablero[0][2] == marca and tablero[1][1] == marca and tablero[2][0] == marca) : # 
+        victoria = True
+
+    if victoria:
+        for fila in range(len(tablero)):
+            for columna in range(len(tablero[fila])):
+                celda = tablero[fila][columna]
+                print(celda, end=" ")
+                if columna < len(tablero[fila]) - 1:
+                    print("|", end=" ")
+            print()
+            if fila < len(tablero) - 1:
+                print("==+===+===")
+        print(f"\nEl jugador {turno} ha ganado!")
+        juego_terminado = True
+        
+    elif movimientos_realizados == 9:
+        for fila in range(len(tablero)):
+            for columna in range(len(tablero[fila])):
+                celda = tablero[fila][columna]
+                print(celda, end=" ")
+                if columna < len(tablero[fila]) - 1:
+                    print("|", end=" ")
+            print()
+            if fila < len(tablero) - 1:
+                print("==+===+===")
+        print("\n Es un Empate. El tablero está lleno.")
+        juego_terminado = True
+    
+    else:
+        if turno == "X":
+            turno = "O"
+        else:
+            turno = "X"
+    
 #-----------------------------------------------------------------------------------------------------------------
 
 #10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7.
