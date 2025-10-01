@@ -169,26 +169,75 @@
 
 # print("Ejercicio N°6")
 
-lista_num=[1,3,5,6,7,2,9]
-nueva_lista_num =[]
+# lista_num=[1,3,5,6,7,2,9]
+# nueva_lista_num =[]
 
-print(f"Lista original: {lista_num}")
+# print(f"Lista original: {lista_num}")
 
-ultimo_elemento = lista_num[-1]
-nueva_lista_num = [ultimo_elemento]
+# ultimo_elemento = lista_num[-1]
+# nueva_lista_num = [ultimo_elemento]
 
-for num in range(len(lista_num) - 1):
-    nueva_lista_num.append(lista_num[num])
+# for num in range(len(lista_num) - 1):
+#     nueva_lista_num.append(lista_num[num])
 
-print("Lista rotada hacia la derecha:")
-for numero in nueva_lista_num:
-    print(numero, end=" ")
+# print("Lista rotada hacia la derecha:")
+# for numero in nueva_lista_num:
+#     print(numero, end=" ")
 
 #-----------------------------------------------------------------------------------------------------------------
 
 #7)Crear una matriz (lista anidada) de 7x2 con las temperaturas mínimas y máximas de una semana.
 # • Calcular el promedio de las mínimas y el de las máximas.
 # • Mostrar en qué día se registró la mayor amplitud térmica
+
+# print("Ejercicio N°7")
+
+temperaturas =[ [15,21],
+                [15,25],
+                [15,28],
+                [16,34],
+                [19,35],
+                [18,30],
+                [14,21]]
+temp_max =0
+temp_min=100
+temp_max_suma=0
+temp_min_suma=0
+temp_max_promedio=0
+temp_min_promedio=0
+dia_amplitud=0
+amplitud_max=0
+dia_amplitud_max=0
+
+for dia in range(len(temperaturas)):
+
+    if temperaturas[dia][1] > temp_max:
+        temp_max = temperaturas[dia][1]
+
+    if temperaturas[dia][0] < temp_min:
+        temp_min = temperaturas[dia][0]
+
+    temp_max_suma += temperaturas[dia][1]
+    temp_min_suma += temperaturas[dia][0]
+
+    amplitud_dia= temperaturas[dia][1] - temperaturas[dia][0]
+
+    if amplitud_dia > amplitud_max:
+        amplitud_max = amplitud_dia
+        dia_amplitud_max = dia
+    print(f"Día {dia+1}")
+    print(f"Temp. Mínima: {temperaturas[dia][0]}°C")
+    print(f"Temp. Máxima: {temperaturas[dia][1]}°C")
+    print(f"Amplitud térmica: {amplitud_dia}°C")
+
+temp_max_promedio = temp_max_suma / len(temperaturas)
+temp_min_promedio = temp_min_suma / len(temperaturas)
+print(f"------------------------------------------------")
+print(f"Temperatura máxima promedio: {temp_max_promedio}°C")
+print(f"Temperatura mínima promedio: {temp_min_promedio}°C")
+print(f"Amplitud máxima registrada: {amplitud_max}°C en el día {dia_amplitud_max + 1}")
+
+
 
 #-----------------------------------------------------------------------------------------------------------------
 
