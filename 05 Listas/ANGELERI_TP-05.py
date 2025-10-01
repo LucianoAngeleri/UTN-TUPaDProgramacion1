@@ -250,172 +250,172 @@
 # • Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O".
 # • Mostrar el tablero después de cada jugada.
 
-print("Ejercicio N°9")
+# print("Ejercicio N°9")
 
-tablero=[["-","-","-"],
-         ["-","-","-"],
-        ["-","-","-"]]
-juego_terminado = False
-turno = "X"
-movimientos_realizados = 0
-while juego_terminado != True:
-    print("""
-1 | 2 | 3 
-==+===+===
- 4 | 5 | 6 
-==+===+===
-7 | 8 | 9 
-          """)
+# tablero=[["-","-","-"],
+#          ["-","-","-"],
+#         ["-","-","-"]]
+# juego_terminado = False
+# turno = "X"
+# movimientos_realizados = 0
+# while juego_terminado != True:
+#     print("""
+# 1 | 2 | 3 
+# ==+===+===
+#  4 | 5 | 6 
+# ==+===+===
+# 7 | 8 | 9 
+#           """)
 
-    posicion_valida = False
+#     posicion_valida = False
 
-    for fila in range(len(tablero)):
-        for columna in range(len(tablero[fila])):
-            celda = tablero[fila][columna]
-            print(celda, end=" ")
-            if columna < len(tablero[fila]) - 1:
-                print("|", end=" ")
-        print()
-        if fila < len(tablero) - 1:
-            print("==+===+===")
+#     for fila in range(len(tablero)):
+#         for columna in range(len(tablero[fila])):
+#             celda = tablero[fila][columna]
+#             print(celda, end=" ")
+#             if columna < len(tablero[fila]) - 1:
+#                 print("|", end=" ")
+#         print()
+#         if fila < len(tablero) - 1:
+#             print("==+===+===")
 
-    while posicion_valida != True:
+#     while posicion_valida != True:
         
-        jugador_posicion_str = input(f"Jugador ({turno}) - Ingrese la posición (1-9) donde desea colocar su marca: ")
+#         jugador_posicion_str = input(f"Jugador ({turno}) - Ingrese la posición (1-9) donde desea colocar su marca: ")
 
-        if jugador_posicion_str.isdigit():
+#         if jugador_posicion_str.isdigit():
 
-            jugador_posicion = int(jugador_posicion_str)
+#             jugador_posicion = int(jugador_posicion_str)
 
-            if jugador_posicion >= 1 and jugador_posicion <= 9:
-                match jugador_posicion:
-                    case 1:
-                        if tablero[0][0] == "-":
-                            tablero[0][0] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 2:
-                        if tablero[0][1] == "-":
-                            tablero[0][1] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue             
-                    case 3:
-                        if tablero[0][2] == "-":
-                            tablero[0][2] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 4:
-                        if tablero[1][0] == "-":
-                            tablero[1][0] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 5:
-                        if tablero[1][1] == "-":
-                            tablero[1][1] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 6:
-                        if tablero[1][2] == "-":
-                            tablero[1][2] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 7:
-                        if tablero[2][0] == "-":
-                            tablero[2][0] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 8:
-                        if tablero[2][1] == "-":
-                            tablero[2][1] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue                
-                    case 9:
-                        if tablero[2][2] == "-":
-                            tablero[2][2] = turno
-                            break
-                        else:
-                            print("La posición ya está ocupada. Intente nuevamente.")
-                            continue
-                posicion_valida = True
-            else:
-                print("Posición inválida. Ingrese un número entre 1 y 9.")
-        else:
-            print("Entrada inválida. Por favor, ingrese un número .")
+#             if jugador_posicion >= 1 and jugador_posicion <= 9:
+#                 match jugador_posicion:
+#                     case 1:
+#                         if tablero[0][0] == "-":
+#                             tablero[0][0] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 2:
+#                         if tablero[0][1] == "-":
+#                             tablero[0][1] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue             
+#                     case 3:
+#                         if tablero[0][2] == "-":
+#                             tablero[0][2] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 4:
+#                         if tablero[1][0] == "-":
+#                             tablero[1][0] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 5:
+#                         if tablero[1][1] == "-":
+#                             tablero[1][1] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 6:
+#                         if tablero[1][2] == "-":
+#                             tablero[1][2] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 7:
+#                         if tablero[2][0] == "-":
+#                             tablero[2][0] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 8:
+#                         if tablero[2][1] == "-":
+#                             tablero[2][1] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue                
+#                     case 9:
+#                         if tablero[2][2] == "-":
+#                             tablero[2][2] = turno
+#                             break
+#                         else:
+#                             print("La posición ya está ocupada. Intente nuevamente.")
+#                             continue
+#                 posicion_valida = True
+#             else:
+#                 print("Posición inválida. Ingrese un número entre 1 y 9.")
+#         else:
+#             print("Entrada inválida. Por favor, ingrese un número .")
 
-    movimientos_realizados += 1
+#     movimientos_realizados += 1
 
-    victoria = False
+#     victoria = False
 
-    marca = turno
+#     marca = turno
 
-    if (tablero[0][0] == marca and tablero[0][1] == marca and tablero[0][2] == marca):
-        victoria = True
-    elif (tablero[1][0] == marca and tablero[1][1] == marca and tablero[1][2] == marca):
-        victoria = True
-    elif (tablero[2][0] == marca and tablero[2][1] == marca and tablero[2][2] == marca) :
-        victoria = True
+#     if (tablero[0][0] == marca and tablero[0][1] == marca and tablero[0][2] == marca):
+#         victoria = True
+#     elif (tablero[1][0] == marca and tablero[1][1] == marca and tablero[1][2] == marca):
+#         victoria = True
+#     elif (tablero[2][0] == marca and tablero[2][1] == marca and tablero[2][2] == marca) :
+#         victoria = True
 
-    # B. ColuTnas
-    elif (tablero[0][0] == marca and tablero[1][0] == marca and tablero[2][0] == marca) :
-        victoria = True
-    elif (tablero[0][1] == marca and tablero[1][1] == marca and tablero[2][1] == marca) :
-        victoria = True
-    elif (tablero[0][2] == marca and tablero[1][2] == marca and tablero[2][2] == marca) :
-        victoria = True
+#     # B. ColuTnas
+#     elif (tablero[0][0] == marca and tablero[1][0] == marca and tablero[2][0] == marca) :
+#         victoria = True
+#     elif (tablero[0][1] == marca and tablero[1][1] == marca and tablero[2][1] == marca) :
+#         victoria = True
+#     elif (tablero[0][2] == marca and tablero[1][2] == marca and tablero[2][2] == marca) :
+#         victoria = True
 
-    # C. Diagonales
-    elif (tablero[0][0] == marca and tablero[1][1] == marca and tablero[2][2] == marca) : 
-        victoria = True
-    elif (tablero[0][2] == marca and tablero[1][1] == marca and tablero[2][0] == marca) : # 
-        victoria = True
+#     # C. Diagonales
+#     elif (tablero[0][0] == marca and tablero[1][1] == marca and tablero[2][2] == marca) : 
+#         victoria = True
+#     elif (tablero[0][2] == marca and tablero[1][1] == marca and tablero[2][0] == marca) : # 
+#         victoria = True
 
-    if victoria:
-        for fila in range(len(tablero)):
-            for columna in range(len(tablero[fila])):
-                celda = tablero[fila][columna]
-                print(celda, end=" ")
-                if columna < len(tablero[fila]) - 1:
-                    print("|", end=" ")
-            print()
-            if fila < len(tablero) - 1:
-                print("==+===+===")
-        print(f"\nEl jugador {turno} ha ganado!")
-        juego_terminado = True
+#     if victoria:
+#         for fila in range(len(tablero)):
+#             for columna in range(len(tablero[fila])):
+#                 celda = tablero[fila][columna]
+#                 print(celda, end=" ")
+#                 if columna < len(tablero[fila]) - 1:
+#                     print("|", end=" ")
+#             print()
+#             if fila < len(tablero) - 1:
+#                 print("==+===+===")
+#         print(f"\nEl jugador {turno} ha ganado!")
+#         juego_terminado = True
         
-    elif movimientos_realizados == 9:
-        for fila in range(len(tablero)):
-            for columna in range(len(tablero[fila])):
-                celda = tablero[fila][columna]
-                print(celda, end=" ")
-                if columna < len(tablero[fila]) - 1:
-                    print("|", end=" ")
-            print()
-            if fila < len(tablero) - 1:
-                print("==+===+===")
-        print("\n Es un Empate. El tablero está lleno.")
-        juego_terminado = True
+#     elif movimientos_realizados == 9:
+#         for fila in range(len(tablero)):
+#             for columna in range(len(tablero[fila])):
+#                 celda = tablero[fila][columna]
+#                 print(celda, end=" ")
+#                 if columna < len(tablero[fila]) - 1:
+#                     print("|", end=" ")
+#             print()
+#             if fila < len(tablero) - 1:
+#                 print("==+===+===")
+#         print("\n Es un Empate. El tablero está lleno.")
+#         juego_terminado = True
     
-    else:
-        if turno == "X":
-            turno = "O"
-        else:
-            turno = "X"
+#     else:
+#         if turno == "X":
+#             turno = "O"
+#         else:
+#             turno = "X"
     
 #-----------------------------------------------------------------------------------------------------------------
 
@@ -423,3 +423,81 @@ while juego_terminado != True:
 # • Mostrar el total vendido por cada producto.
 # • Mostrar el día con mayores ventas totales.
 # • Indicar cuál fue el producto más vendido en la semana.
+
+print("Ejercicio N°10")
+
+ventas = [ [150,200,250,300,350,400,450],
+           [100,150,200,250,300,350,400],
+           [200,250,300,350,400,450,500],
+           [250,300,350,400,450,500,550]]
+
+total_producto1=0
+total_producto2=0
+total_producto3=0
+total_producto4=0
+num_producto = 0
+
+dia_max_ventas=""
+dia_max_ventas_monto=0
+producto_max_venta_num=0
+producto_max_venta_monto=0
+
+dia1_ventas = 0
+dia2_ventas = 0
+dia3_ventas = 0
+dia4_ventas = 0
+dia5_ventas = 0 
+dia6_ventas = 0 
+dia7_ventas = 0
+
+for producto in range(len(ventas)):
+    print("="*16)
+    print(f"Producto N°{producto+1}")
+    print("="*16)
+    num_producto +=1
+    for num_dia in range(len(ventas[producto])):
+        if num_producto == 1:
+            total_producto1 += ventas[producto][num_dia]
+        elif num_producto == 2:
+            total_producto2 += ventas[producto][num_dia]
+        elif num_producto == 3:
+            total_producto3 += ventas[producto][num_dia]
+        elif num_producto == 4:
+            total_producto4 += ventas[producto][num_dia]
+    
+        if num_dia == 0:
+            dia1_ventas += ventas[producto][num_dia]
+        elif num_dia == 1:
+            dia2_ventas += ventas[producto][num_dia]
+        elif num_dia == 2:
+            dia3_ventas += ventas[producto][num_dia]
+        elif num_dia == 3:
+            dia4_ventas += ventas[producto][num_dia]
+        elif num_dia == 4:
+            dia5_ventas += ventas[producto][num_dia]
+        elif num_dia == 5:
+            dia6_ventas += ventas[producto][num_dia]        
+        elif num_dia == 6:
+            dia7_ventas += ventas[producto][num_dia]
+
+        print(f"Venta del día {num_dia+1}: ${ventas[producto][num_dia]}")
+
+    
+        
+totales_dias_ventas = [dia1_ventas,dia2_ventas,dia3_ventas,dia4_ventas,dia5_ventas,dia6_ventas,dia7_ventas]
+totales_productos_ventas = [total_producto1,total_producto2,total_producto3,total_producto4]
+
+for total_producto_num in range(len(totales_productos_ventas)):
+    print(f"Total ventas Producto N°{total_producto_num+1} = ${totales_productos_ventas[total_producto_num]}")
+    if producto_max_venta_monto < totales_productos_ventas[total_producto_num]:
+       producto_max_venta_monto = totales_productos_ventas[total_producto_num]
+       producto_max_venta_num = total_producto_num
+
+
+for totales_dias_ventas_num in range(len(totales_dias_ventas)):
+    if dia_max_ventas_monto < totales_dias_ventas[totales_dias_ventas_num]:
+        dia_max_ventas_monto = totales_dias_ventas[totales_dias_ventas_num]
+        dia_max_ventas = totales_dias_ventas_num+1
+
+print(f"Dia con mayor venta: {dia_max_ventas} , Monto: ${dia_max_ventas_monto}")
+print(f"Producto más vendido: Producto N°{total_producto_num+1} , Monto: ${producto_max_venta_monto}")
