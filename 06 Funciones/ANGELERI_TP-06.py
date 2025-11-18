@@ -9,16 +9,26 @@
 
 #2) Crear una función llamada saludar_usuario(nombre) que reciba como parámetro un nombre y devuelva un saludo personalizado. Por ejemplo, si se llama con saludar_usuario("Marcos"), deberá devolver: “Hola Marcos!”. Llamar a esta función desde el programa principal solicitando el nombre al usuario.
 
-print("Ejercicio 2")
+# print("Ejercicio 2")
 
-def saludar_usuario(nombre):
-    print(f"Hola {nombre}! Cómo estas?")
-nombre_usuario = input("Ingrese su nombre: ")
-saludar_usuario(nombre_usuario)
+# def saludar_usuario(nombre):
+#     print(f"Hola {nombre}! Cómo estas?")
+# nombre_usuario = input("Ingrese su nombre: ")
+# saludar_usuario(nombre_usuario)
 
 #3) Crear una función llamada informacion_personal(nombre, apellido, edad, residencia) que reciba cuatro parámetros e imprima: “Soy [nombre] [apellido], tengo [edad] años y vivo en [residencia]”. Pedir los datos al usuario y llamar a esta función con los valores ingresados.
 
-#print("Ejercicio 3")
+print("Ejercicio 3")
+
+def informacion_personal(nombre, apellido, edad, residencia):
+    print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}")
+
+nombre_usuario = input("Ingrese su nombre: ")
+apellido_usuario = input("Ingrese su apellido: ")
+edad_usuario = input("Ingrese su edad: ")
+residencia_usuario = input("Ingrese su residencia: ")
+
+informacion_personal(nombre_usuario, apellido_usuario, edad_usuario, residencia_usuario)
 
 #4) Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 
