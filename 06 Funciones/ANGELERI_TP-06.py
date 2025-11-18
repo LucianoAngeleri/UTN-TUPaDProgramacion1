@@ -48,17 +48,23 @@
 
 #5) Crear una función llamada segundos_a_horas(segundos) que reciba una cantidad de segundos como parámetro y devuelva la cantidad de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
 
-print("Ejercicio 5")
+# print("Ejercicio 5")
 
-def segundos_a_horas(segundos):
-    return segundos / 3600
+# def segundos_a_horas(segundos):
+#     return segundos / 3600
 
-segundos_usuario=int(input("Ingrese los segundos: "))
-print(f"{segundos_usuario} segundos son: {segundos_a_horas(segundos_usuario)} horas")
+# segundos_usuario=int(input("Ingrese los segundos: "))
+# print(f"{segundos_usuario} segundos son: {segundos_a_horas(segundos_usuario)} horas")
 
 #6) Crear una función llamada tabla_multiplicar(numero) que reciba un número como parámetro y imprima la tabla de multiplicar de ese número del 1 al 10. Pedir al usuario el número y llamar a la función.
 
-#print("Ejercicio 6")
+print("Ejercicio 6")
+
+def tabla_multiplicar(numero):
+    for i in range (0,11):
+        print(f"{numero} x {i} = {numero*i}")
+num = int(input("Ingrese un número para obtener su tabla de multiplicar: "))
+tabla_multiplicar(num)
 
 #7) Crear una función llamada operaciones_basicas(a, b) que reciba dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
 
