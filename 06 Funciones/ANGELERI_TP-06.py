@@ -32,23 +32,29 @@
 
 #4) Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 
-print("Ejercicio 4")
-from math import pi
+# print("Ejercicio 4")
+# from math import pi
 
-def calcular_area_circulo(radio):
-    return pi* radio*radio 
+# def calcular_area_circulo(radio):
+#     return pi* radio*radio 
 
-def calcular_perimetro_circulo(radio):
-    return 2* pi * radio
+# def calcular_perimetro_circulo(radio):
+#     return 2* pi * radio
 
-radio_circulo = float(input("Ingrese el radio del circulo: "))
+# radio_circulo = float(input("Ingrese el radio del circulo: "))
 
-print(f"El área de un circulo de {radio_circulo} es {calcular_area_circulo(radio_circulo)}")
-print(f"El perímetro de un circulo de {radio_circulo} es {calcular_perimetro_circulo(radio_circulo)}")
+# print(f"El área de un circulo de {radio_circulo} es {calcular_area_circulo(radio_circulo)}")
+# print(f"El perímetro de un circulo de {radio_circulo} es {calcular_perimetro_circulo(radio_circulo)}")
 
 #5) Crear una función llamada segundos_a_horas(segundos) que reciba una cantidad de segundos como parámetro y devuelva la cantidad de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
 
-#print("Ejercicio 5")
+print("Ejercicio 5")
+
+def segundos_a_horas(segundos):
+    return segundos / 3600
+
+segundos_usuario=int(input("Ingrese los segundos: "))
+print(f"{segundos_usuario} segundos son: {segundos_a_horas(segundos_usuario)} horas")
 
 #6) Crear una función llamada tabla_multiplicar(numero) que reciba un número como parámetro y imprima la tabla de multiplicar de ese número del 1 al 10. Pedir al usuario el número y llamar a la función.
 
