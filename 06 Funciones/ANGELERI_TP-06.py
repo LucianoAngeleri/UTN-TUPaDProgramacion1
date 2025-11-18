@@ -18,21 +18,33 @@
 
 #3) Crear una función llamada informacion_personal(nombre, apellido, edad, residencia) que reciba cuatro parámetros e imprima: “Soy [nombre] [apellido], tengo [edad] años y vivo en [residencia]”. Pedir los datos al usuario y llamar a esta función con los valores ingresados.
 
-print("Ejercicio 3")
+# print("Ejercicio 3")
 
-def informacion_personal(nombre, apellido, edad, residencia):
-    print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}")
+# def informacion_personal(nombre, apellido, edad, residencia):
+#     print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}")
 
-nombre_usuario = input("Ingrese su nombre: ")
-apellido_usuario = input("Ingrese su apellido: ")
-edad_usuario = input("Ingrese su edad: ")
-residencia_usuario = input("Ingrese su residencia: ")
+# nombre_usuario = input("Ingrese su nombre: ")
+# apellido_usuario = input("Ingrese su apellido: ")
+# edad_usuario = input("Ingrese su edad: ")
+# residencia_usuario = input("Ingrese su residencia: ")
 
-informacion_personal(nombre_usuario, apellido_usuario, edad_usuario, residencia_usuario)
+# informacion_personal(nombre_usuario, apellido_usuario, edad_usuario, residencia_usuario)
 
 #4) Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 
-#print("Ejercicio 4")
+print("Ejercicio 4")
+from math import pi
+
+def calcular_area_circulo(radio):
+    return pi* radio*radio 
+
+def calcular_perimetro_circulo(radio):
+    return 2* pi * radio
+
+radio_circulo = float(input("Ingrese el radio del circulo: "))
+
+print(f"El área de un circulo de {radio_circulo} es {calcular_area_circulo(radio_circulo)}")
+print(f"El perímetro de un circulo de {radio_circulo} es {calcular_perimetro_circulo(radio_circulo)}")
 
 #5) Crear una función llamada segundos_a_horas(segundos) que reciba una cantidad de segundos como parámetro y devuelva la cantidad de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
 
