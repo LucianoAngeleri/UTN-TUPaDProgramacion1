@@ -23,7 +23,7 @@ precios_frutas["Pera"]= 2300
 # ● Manzana = 1700
 # ● Melón = 2800
 
-print("Ejercicio 2")
+# print("Ejercicio 2")
 
 precios_frutas.update({
     "Banana" : 1330,
@@ -31,12 +31,15 @@ precios_frutas.update({
     "Melón" : 2800
 })
 
-print(precios_frutas)
+# print(precios_frutas)
 
 #3) Siguiendo con el diccionario precios_frutas que resulta luego de ejecutar el código desarrollado en el punto anterior, crear una lista que contenga únicamente las frutas sin los precios.
 
+print("Ejercicio 3")
 
-#print("Ejercicio 3")
+lista_frutas = list(precios_frutas.keys())
+
+print(lista_frutas)
 
 #4)  Escribí un programa que permita almacenar y consultar números telefónicos.
 # • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor.
