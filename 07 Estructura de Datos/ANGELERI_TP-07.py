@@ -10,17 +10,26 @@ precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva':
 
 print("Ejercicio 1")
 
+precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva':
+1450}
+precios_frutas["Naranja"]= 1200
+precios_frutas["Manzana"]= 1500
+precios_frutas["Pera"]= 2300
+
+print(precios_frutas)
+
+
 #2) Siguiendo con el diccionario precios_frutas que resulta luego de ejecutar el código desarrollado en el punto anterior, actualizar los precios de las siguientes frutas:
 # ● Banana = 1330
 # ● Manzana = 1700
 # ● Melón = 2800
 
-print("Ejercicio 2")
+#print("Ejercicio 2")
 
 #3) Siguiendo con el diccionario precios_frutas que resulta luego de ejecutar el código desarrollado en el punto anterior, crear una lista que contenga únicamente las frutas sin los precios.
 
 
-print("Ejercicio 3")
+#print("Ejercicio 3")
 
 #4)  Escribí un programa que permita almacenar y consultar números telefónicos.
 # • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor.
@@ -31,7 +40,7 @@ contactos = {"Juan": "123456", "Ana": "987654"}
 #Consultar: "Juan" -> muestra "123456"
 """
 
-print("Ejercicio 4")
+#print("Ejercicio 4")
 
 #5) 5) Solicita al usuario una frase e imprime:
 # • Las palabras únicas (usando un set).
@@ -44,7 +53,7 @@ Palabras_únicas: {'hola', 'mundo'}
 Recuento: {'hola': 2, 'mundo': 1}
 """
 
-print("Ejercicio 5")
+#print("Ejercicio 5")
 
 #6)  Permití ingresar los nombres de 3 alumnos, y para cada uno una tupla de 3 notas. Luego, mostrá el promedio de cada alumno. Ejemplo
 """
@@ -54,7 +63,7 @@ alumnos ={
 }
 """
 
-print("Ejercicio 6")
+#print("Ejercicio 6")
 
 #7)  Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2:
 # • Mostrá los que aprobaron ambos parciales.
@@ -62,14 +71,14 @@ print("Ejercicio 6")
 # • Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
 
 
-print("Ejercicio 7")
+#print("Ejercicio 7")
 
 #8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario:
 # • Consultar el stock de un producto ingresado.
 # • Agregar unidades al stock si el producto ya existe.
 # • Agregar un nuevo producto si no existe.
 
-print("Ejercicio 8")
+#print("Ejercicio 8")
 
 #9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.Ejemplo:
 """
@@ -80,7 +89,7 @@ agenda = {
 """
 # Permití consultar qué actividad hay en cierto día y hora.
 
-print("Ejercicio 9")
+#print("Ejercicio 9")
 
 #10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo diccionario donde:
 # • Las capitales sean las claves.
@@ -91,4 +100,4 @@ original = {"Argentina": "Buenos Aires", "Chile": "Santiago"}
 invertido = {"Buenos Aires": "Argentina", "Santiago": "Chile"}
 """
 
-print("Ejercicio 10")
+#print("Ejercicio 10")
