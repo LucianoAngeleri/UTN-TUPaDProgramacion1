@@ -74,7 +74,7 @@ def operaciones_basicas(a, b):
     suma = a + b
     resta = a - b
     multiplicacion = a * b
-    division = a / b
+    division = (a / b) if b != 0 else "No se puede dividir por 0."
 
     opreaciones = ("Suma", suma,"Resta", resta,"Multiplicacion", multiplicacion,"Division", division)
     return opreaciones
@@ -83,7 +83,11 @@ num2 = float(input("Ingrese el segundo número: "))
 
 resultados = operaciones_basicas(num1, num2)
 
-print(resultados)
+print(f"Operaciones entre {num1} y {num2}:")
+print(f"  Suma:           {num1} + {num2} = {resultados[1]}")
+print(f"  Resta:          {num1} - {num2} = {resultados[3]}")
+print(f"  Multiplicación: {num1} × {num2} = {resultados[5]}")
+print(f"  División:       {num1} ÷ {num2} = {resultados[7]}")
 
 
 #8) Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
