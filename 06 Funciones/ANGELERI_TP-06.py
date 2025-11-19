@@ -105,15 +105,26 @@
 
 #9) Crear una función llamada celsius_a_fahrenheit(celsius) que reciba una temperatura en grados Celsius y devuelva su equivalente en Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el resultado usando la función.
 
-print("Ejercicio 9")
+# print("Ejercicio 9")
 
-def celsius_a_fahrenheit(celsius):
-    return (celsius*9/5)+32
+# def celsius_a_fahrenheit(celsius):
+#     return (celsius*9/5)+32
 
-celsius = float(input("Ingrese la temperatura en Celsius: "))
-fahrenheit = celsius_a_fahrenheit(celsius)
-print(f"{celsius}°C equivalen a {fahrenheit:.2f}°F")
+# celsius = float(input("Ingrese la temperatura en Celsius: "))
+# fahrenheit = celsius_a_fahrenheit(celsius)
+# print(f"{celsius}°C equivalen a {fahrenheit:.2f}°F")
 
 #10) Crear una función llamada calcular_promedio(a, b, c) que reciba tres números como parámetros y devuelva el promedio de ellos. Solicitar los números al usuario y mostrar el resultado usando esta función.
 
-#print("Ejercicio 10")
+print("Ejercicio 10")
+
+def calcular_promedio(a, b, c):
+    return (a+b+c)/3
+
+print("Se va a calcular el promedio de 3 numeros ingresado")
+num1 = float(input("Ingrese el primer número:"))
+num2 = float(input("Ingrese el segundo número:"))
+num3 = float(input("Ingrese el tercer número:"))
+
+promedio = calcular_promedio(num1,num2,num3)
+print(f"El promedio de {num1}, {num2} y {num3} es: {promedio:.2f}")
