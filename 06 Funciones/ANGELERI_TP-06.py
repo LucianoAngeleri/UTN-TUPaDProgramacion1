@@ -68,31 +68,40 @@
 
 #7) Crear una función llamada operaciones_basicas(a, b) que reciba dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
 
-print("Ejercicio 7")
+# print("Ejercicio 7")
 
-def operaciones_basicas(a, b):
-    suma = a + b
-    resta = a - b
-    multiplicacion = a * b
-    division = (a / b) if b != 0 else "No se puede dividir por 0."
+# def operaciones_basicas(a, b):
+#     suma = a + b
+#     resta = a - b
+#     multiplicacion = a * b
+#     division = (a / b) if b != 0 else "No se puede dividir por 0."
 
-    opreaciones = ("Suma", suma,"Resta", resta,"Multiplicacion", multiplicacion,"Division", division)
-    return opreaciones
-num1 = float(input("Ingrese el primer número: "))
-num2 = float(input("Ingrese el segundo número: "))
+#     opreaciones = ("Suma", suma,"Resta", resta,"Multiplicacion", multiplicacion,"Division", division)
+#     return opreaciones
+# num1 = float(input("Ingrese el primer número: "))
+# num2 = float(input("Ingrese el segundo número: "))
 
-resultados = operaciones_basicas(num1, num2)
+# resultados = operaciones_basicas(num1, num2)
 
-print(f"Operaciones entre {num1} y {num2}:")
-print(f"  Suma:           {num1} + {num2} = {resultados[1]}")
-print(f"  Resta:          {num1} - {num2} = {resultados[3]}")
-print(f"  Multiplicación: {num1} × {num2} = {resultados[5]}")
-print(f"  División:       {num1} ÷ {num2} = {resultados[7]}")
+# print(f"Operaciones entre {num1} y {num2}:")
+# print(f"  Suma:           {num1} + {num2} = {resultados[1]}")
+# print(f"  Resta:          {num1} - {num2} = {resultados[3]}")
+# print(f"  Multiplicación: {num1} × {num2} = {resultados[5]}")
+# print(f"  División:       {num1} ÷ {num2} = {resultados[7]}")
 
 
 #8) Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
 
-#print("Ejercicio 8")
+print("Ejercicio 8")
+
+def calcular_imc(peso, altura):
+    imc = peso / (altura ** 2)
+    return imc
+peso_usuario = float(input("Ingrese su peso en kilogramos: "))
+altura_usuario = float(input("Ingrese su altura en metros: "))
+
+imc_usuario = calcular_imc(peso_usuario,altura_usuario)
+print(f"El IMC del usuario que pesa {peso_usuario}kg y mide {altura_usuario}m es: {imc_usuario:.2f}")
 
 #9) Crear una función llamada celsius_a_fahrenheit(celsius) que reciba una temperatura en grados Celsius y devuelva su equivalente en Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el resultado usando la función.
 
