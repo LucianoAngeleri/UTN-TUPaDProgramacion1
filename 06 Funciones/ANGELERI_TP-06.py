@@ -92,20 +92,27 @@
 
 #8) Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
 
-print("Ejercicio 8")
+# print("Ejercicio 8")
 
-def calcular_imc(peso, altura):
-    imc = peso / (altura ** 2)
-    return imc
-peso_usuario = float(input("Ingrese su peso en kilogramos: "))
-altura_usuario = float(input("Ingrese su altura en metros: "))
+# def calcular_imc(peso, altura):
+#     imc = peso / (altura ** 2)
+#     return imc
+# peso_usuario = float(input("Ingrese su peso en kilogramos: "))
+# altura_usuario = float(input("Ingrese su altura en metros: "))
 
-imc_usuario = calcular_imc(peso_usuario,altura_usuario)
-print(f"El IMC del usuario que pesa {peso_usuario}kg y mide {altura_usuario}m es: {imc_usuario:.2f}")
+# imc_usuario = calcular_imc(peso_usuario,altura_usuario)
+# print(f"El IMC del usuario que pesa {peso_usuario}kg y mide {altura_usuario}m es: {imc_usuario:.2f}")
 
 #9) Crear una función llamada celsius_a_fahrenheit(celsius) que reciba una temperatura en grados Celsius y devuelva su equivalente en Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el resultado usando la función.
 
-#print("Ejercicio 9")
+print("Ejercicio 9")
+
+def celsius_a_fahrenheit(celsius):
+    return (celsius*9/5)+32
+
+celsius = float(input("Ingrese la temperatura en Celsius: "))
+fahrenheit = celsius_a_fahrenheit(celsius)
+print(f"{celsius}°C equivalen a {fahrenheit:.2f}°F")
 
 #10) Crear una función llamada calcular_promedio(a, b, c) que reciba tres números como parámetros y devuelva el promedio de ellos. Solicitar los números al usuario y mostrar el resultado usando esta función.
 
