@@ -58,17 +58,33 @@
 
 #6) Crear una función llamada tabla_multiplicar(numero) que reciba un número como parámetro y imprima la tabla de multiplicar de ese número del 1 al 10. Pedir al usuario el número y llamar a la función.
 
-print("Ejercicio 6")
+# print("Ejercicio 6")
 
-def tabla_multiplicar(numero):
-    for i in range (0,11):
-        print(f"{numero} x {i} = {numero*i}")
-num = int(input("Ingrese un número para obtener su tabla de multiplicar: "))
-tabla_multiplicar(num)
+# def tabla_multiplicar(numero):
+#     for i in range (0,11):
+#         print(f"{numero} x {i} = {numero*i}")
+# num = int(input("Ingrese un número para obtener su tabla de multiplicar: "))
+# tabla_multiplicar(num)
 
 #7) Crear una función llamada operaciones_basicas(a, b) que reciba dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
 
-#print("Ejercicio 7")
+print("Ejercicio 7")
+
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b
+
+    opreaciones = ("Suma", suma,"Resta", resta,"Multiplicacion", multiplicacion,"Division", division)
+    return opreaciones
+num1 = float(input("Ingrese el primer número: "))
+num2 = float(input("Ingrese el segundo número: "))
+
+resultados = operaciones_basicas(num1, num2)
+
+print(resultados)
+
 
 #8) Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
 
