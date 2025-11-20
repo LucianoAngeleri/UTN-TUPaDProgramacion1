@@ -102,41 +102,58 @@ alumnos ={
 }
 """
 
-print("Ejercicio 6")
+# print("Ejercicio 6")
 
-alumnos ={}
+# alumnos ={}
 
-num_alumnos = 3
-num_notas = 3
+# num_alumnos = 3
+# num_notas = 3
 
-for i in range(num_alumnos):
-    nombre = input(f"Ingrese el nombre del alumno {i + 1}: ")
+# for i in range(num_alumnos):
+#     nombre = input(f"Ingrese el nombre del alumno {i + 1}: ")
     
-    notas = []
+#     notas = []
 
-    print(f"Ingrese las {num_notas} notas para {nombre}:")
-    for j in range(num_notas):
-        nota = float(input(f"Ingrese la nota n° {j+1}: "))
-        notas.append(nota)
-    alumnos[nombre] = tuple(notas)
+#     print(f"Ingrese las {num_notas} notas para {nombre}:")
+#     for j in range(num_notas):
+#         nota = float(input(f"Ingrese la nota n° {j+1}: "))
+#         notas.append(nota)
+#     alumnos[nombre] = tuple(notas)
 
-print("Listado de Alumnos:")
-print(alumnos)
+# print("Listado de Alumnos:")
+# print(alumnos)
 
-print("--- Promedio de cada alumno ---")
+# print("--- Promedio de cada alumno ---")
 
-for nombre_alumno, notas_tupla in alumnos.items():   
-    promedio =sum(notas_tupla) / len(notas_tupla)
-    
-    print(f"El promedio de {nombre_alumno} es: {promedio:.2f}")
+# for nombre_alumno, notas_tupla in alumnos.items():   
+#     promedio =sum(notas_tupla) / len(notas_tupla)
+
+#     print(f"El promedio de {nombre_alumno} es: {promedio:.2f}")
 
 #7)  Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2:
 # • Mostrá los que aprobaron ambos parciales.
 # • Mostrá los que aprobaron solo uno de los dos.
 # • Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
 
+print("Ejercicio 7")
 
-#print("Ejercicio 7")
+aprobados_parcial1 = {101, 105, 110, 115, 120, 125, 130}
+aprobados_parcial2 = {105, 115, 120, 135, 140, 145}
+
+print(f"Aprobados Parcial 1: {aprobados_parcial1}")
+print(f"Aprobados Parcial 2: {aprobados_parcial2}")
+
+aprobados_ambos = aprobados_parcial1 & aprobados_parcial2
+print("Estudiantes que aprobaron AMBOS parciales:")
+print(aprobados_ambos)
+
+solo_un_parcial = aprobados_parcial1 ^ aprobados_parcial2
+print("Estudiantes que aprobaron SOLO UNO de los dos: ")
+print(solo_un_parcial)
+
+total_aprobados = aprobados_parcial1 | aprobados_parcial2
+print("Lista TOTAL de estudiantes que aprobaron AL MENOS un parcial:")
+print(total_aprobados)
 
 #8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario:
 # • Consultar el stock de un producto ingresado.
