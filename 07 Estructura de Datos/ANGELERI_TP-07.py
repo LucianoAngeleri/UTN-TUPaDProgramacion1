@@ -80,19 +80,19 @@ Palabras_únicas: {'hola', 'mundo'}
 Recuento: {'hola': 2, 'mundo': 1}
 """
 
-print("Ejercicio 5")
-from typing import Counter
+# print("Ejercicio 5")
+# from typing import Counter
 
-frase = str(input("Ingrese una frase: "))
+# frase = str(input("Ingrese una frase: "))
 
-palabras = frase.lower().split()
-palabras_unicas = set(palabras)
+# palabras = frase.lower().split()
+# palabras_unicas = set(palabras)
 
-recuento_diccionario = dict(Counter(palabras))
+# recuento_diccionario = dict(Counter(palabras))
 
-print("Salida:")
-print(f"Palabras_únicas: {palabras_unicas}")
-print(f"Recuento: {recuento_diccionario}")
+# print("Salida:")
+# print(f"Palabras_únicas: {palabras_unicas}")
+# print(f"Recuento: {recuento_diccionario}")
 
 #6)  Permití ingresar los nombres de 3 alumnos, y para cada uno una tupla de 3 notas. Luego, mostrá el promedio de cada alumno. Ejemplo
 """
@@ -102,7 +102,33 @@ alumnos ={
 }
 """
 
-#print("Ejercicio 6")
+print("Ejercicio 6")
+
+alumnos ={}
+
+num_alumnos = 3
+num_notas = 3
+
+for i in range(num_alumnos):
+    nombre = input(f"Ingrese el nombre del alumno {i + 1}: ")
+    
+    notas = []
+
+    print(f"Ingrese las {num_notas} notas para {nombre}:")
+    for j in range(num_notas):
+        nota = float(input(f"Ingrese la nota n° {j+1}: "))
+        notas.append(nota)
+    alumnos[nombre] = tuple(notas)
+
+print("Listado de Alumnos:")
+print(alumnos)
+
+print("--- Promedio de cada alumno ---")
+
+for nombre_alumno, notas_tupla in alumnos.items():   
+    promedio =sum(notas_tupla) / len(notas_tupla)
+    
+    print(f"El promedio de {nombre_alumno} es: {promedio:.2f}")
 
 #7)  Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2:
 # • Mostrá los que aprobaron ambos parciales.
