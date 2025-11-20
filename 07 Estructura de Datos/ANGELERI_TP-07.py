@@ -10,11 +10,11 @@ precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva':
 
 # print("Ejercicio 1")
 
-precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva':
-1450}
-precios_frutas["Naranja"]= 1200
-precios_frutas["Manzana"]= 1500
-precios_frutas["Pera"]= 2300
+# precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva':
+# 1450}
+# precios_frutas["Naranja"]= 1200
+# precios_frutas["Manzana"]= 1500
+# precios_frutas["Pera"]= 2300
 
 # print(precios_frutas)
 
@@ -25,21 +25,21 @@ precios_frutas["Pera"]= 2300
 
 # print("Ejercicio 2")
 
-precios_frutas.update({
-    "Banana" : 1330,
-    "Manzana" : 1700,
-    "Melón" : 2800
-})
+# precios_frutas.update({
+#     "Banana" : 1330,
+#     "Manzana" : 1700,
+#     "Melón" : 2800
+# })
 
 # print(precios_frutas)
 
 #3) Siguiendo con el diccionario precios_frutas que resulta luego de ejecutar el código desarrollado en el punto anterior, crear una lista que contenga únicamente las frutas sin los precios.
 
-print("Ejercicio 3")
+# print("Ejercicio 3")
 
-lista_frutas = list(precios_frutas.keys())
+# lista_frutas = list(precios_frutas.keys())
 
-print(lista_frutas)
+# print(lista_frutas)
 
 #4)  Escribí un programa que permita almacenar y consultar números telefónicos.
 # • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor.
@@ -50,7 +50,24 @@ contactos = {"Juan": "123456", "Ana": "987654"}
 #Consultar: "Juan" -> muestra "123456"
 """
 
-#print("Ejercicio 4")
+print("Ejercicio 4")
+
+contactos ={}
+for i in range(0,2):
+    nombre_ingresado = str(input(f"{i+1}. Ingrese un nombre de contacto: "))
+    numero_ingresado = str(input(f"{i+1}. Ingrese un número de contacto: "))
+    contactos.update({
+        nombre_ingresado: numero_ingresado}
+    )
+print("Contactos agregados correctamente.")
+
+nombre_consulta = str(input("Ingresa un nombre de contacto para consultar: "))
+
+if nombre_consulta in contactos:
+    numero_consulta = contactos[nombre_consulta]
+    print(f"El número de {nombre_consulta} es: {numero_consulta}")
+else:
+    print(f"Error: El contacto '{nombre_consulta}' no se encuentra en la agenda.")
 
 #5) 5) Solicita al usuario una frase e imprime:
 # • Las palabras únicas (usando un set).
