@@ -135,32 +135,72 @@ alumnos ={
 # • Mostrá los que aprobaron solo uno de los dos.
 # • Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
 
-print("Ejercicio 7")
+# print("Ejercicio 7")
 
-aprobados_parcial1 = {101, 105, 110, 115, 120, 125, 130}
-aprobados_parcial2 = {105, 115, 120, 135, 140, 145}
+# aprobados_parcial1 = {101, 105, 110, 115, 120, 125, 130}
+# aprobados_parcial2 = {105, 115, 120, 135, 140, 145}
 
-print(f"Aprobados Parcial 1: {aprobados_parcial1}")
-print(f"Aprobados Parcial 2: {aprobados_parcial2}")
+# print(f"Aprobados Parcial 1: {aprobados_parcial1}")
+# print(f"Aprobados Parcial 2: {aprobados_parcial2}")
 
-aprobados_ambos = aprobados_parcial1 & aprobados_parcial2
-print("Estudiantes que aprobaron AMBOS parciales:")
-print(aprobados_ambos)
+# aprobados_ambos = aprobados_parcial1 & aprobados_parcial2
+# print("Estudiantes que aprobaron AMBOS parciales:")
+# print(aprobados_ambos)
 
-solo_un_parcial = aprobados_parcial1 ^ aprobados_parcial2
-print("Estudiantes que aprobaron SOLO UNO de los dos: ")
-print(solo_un_parcial)
+# solo_un_parcial = aprobados_parcial1 ^ aprobados_parcial2
+# print("Estudiantes que aprobaron SOLO UNO de los dos: ")
+# print(solo_un_parcial)
 
-total_aprobados = aprobados_parcial1 | aprobados_parcial2
-print("Lista TOTAL de estudiantes que aprobaron AL MENOS un parcial:")
-print(total_aprobados)
+# total_aprobados = aprobados_parcial1 | aprobados_parcial2
+# print("Lista TOTAL de estudiantes que aprobaron AL MENOS un parcial:")
+# print(total_aprobados)
 
 #8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario:
 # • Consultar el stock de un producto ingresado.
 # • Agregar unidades al stock si el producto ya existe.
 # • Agregar un nuevo producto si no existe.
 
-#print("Ejercicio 8")
+print("Ejercicio 8")
+
+productos = {
+    "Martillo": 50,
+    "Tornillo": 200,
+    "Clavo": 150
+}
+
+while True:
+    print("--- Opciones ---")
+    print("1. Consultar stock")
+    print("2. Agregar/Actualizar stock o producto")
+    print("3. Salir")
+    opcion = str(input("Seleccione una opción (1-3): "))
+
+    match opcion:
+        case "1":
+            nombre_producto = input("Ingrese el producto a consultar: ")
+            if nombre_producto in productos:
+                stock = productos[nombre_producto]
+                print(f"El stock actual de '{nombre_producto}' es: {stock} unidades.")
+            else:
+                print(f"El producto '{nombre_producto}' no se encuentra en el inventario.")
+        case "2":
+            nombre_producto = input("Ingrese el nombre del producto a agregar/actualizar: ")
+            cantidad = int(input(f"Ingrese la cantidad de unidades a agregar: "))
+            
+            if nombre_producto in productos:              
+                productos[nombre_producto] += cantidad
+                print(f"Stock de '{nombre_producto}' actualizado. Nuevo stock: {productos[nombre_producto]}.")
+            else:
+                print("El producto ingresado no existe, se añadirá un nuevo producto.")
+                productos[nombre_producto] = cantidad
+                print(f"Nuevo producto '{nombre_producto}' agregado con stock inicial de {cantidad}.")
+
+            print(f"Inventario actualizado: {productos}")
+        case "3":
+            print("Saliendo del sistema de inventario.")
+            break
+        case _:
+            print("Opción no válida. Por favor, ingrese 1, 2 o 3.")
 
 #9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.Ejemplo:
 """
