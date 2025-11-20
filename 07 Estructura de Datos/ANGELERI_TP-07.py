@@ -160,47 +160,47 @@ alumnos ={
 # • Agregar unidades al stock si el producto ya existe.
 # • Agregar un nuevo producto si no existe.
 
-print("Ejercicio 8")
+# print("Ejercicio 8")
 
-productos = {
-    "Martillo": 50,
-    "Tornillo": 200,
-    "Clavo": 150
-}
+# productos = {
+#     "Martillo": 50,
+#     "Tornillo": 200,
+#     "Clavo": 150
+# }
 
-while True:
-    print("--- Opciones ---")
-    print("1. Consultar stock")
-    print("2. Agregar/Actualizar stock o producto")
-    print("3. Salir")
-    opcion = str(input("Seleccione una opción (1-3): "))
+# while True:
+#     print("--- Opciones ---")
+#     print("1. Consultar stock")
+#     print("2. Agregar/Actualizar stock o producto")
+#     print("3. Salir")
+#     opcion = str(input("Seleccione una opción (1-3): "))
 
-    match opcion:
-        case "1":
-            nombre_producto = input("Ingrese el producto a consultar: ")
-            if nombre_producto in productos:
-                stock = productos[nombre_producto]
-                print(f"El stock actual de '{nombre_producto}' es: {stock} unidades.")
-            else:
-                print(f"El producto '{nombre_producto}' no se encuentra en el inventario.")
-        case "2":
-            nombre_producto = input("Ingrese el nombre del producto a agregar/actualizar: ")
-            cantidad = int(input(f"Ingrese la cantidad de unidades a agregar: "))
+#     match opcion:
+#         case "1":
+#             nombre_producto = input("Ingrese el producto a consultar: ")
+#             if nombre_producto in productos:
+#                 stock = productos[nombre_producto]
+#                 print(f"El stock actual de '{nombre_producto}' es: {stock} unidades.")
+#             else:
+#                 print(f"El producto '{nombre_producto}' no se encuentra en el inventario.")
+#         case "2":
+#             nombre_producto = input("Ingrese el nombre del producto a agregar/actualizar: ")
+#             cantidad = int(input(f"Ingrese la cantidad de unidades a agregar: "))
             
-            if nombre_producto in productos:              
-                productos[nombre_producto] += cantidad
-                print(f"Stock de '{nombre_producto}' actualizado. Nuevo stock: {productos[nombre_producto]}.")
-            else:
-                print("El producto ingresado no existe, se añadirá un nuevo producto.")
-                productos[nombre_producto] = cantidad
-                print(f"Nuevo producto '{nombre_producto}' agregado con stock inicial de {cantidad}.")
+#             if nombre_producto in productos:              
+#                 productos[nombre_producto] += cantidad
+#                 print(f"Stock de '{nombre_producto}' actualizado. Nuevo stock: {productos[nombre_producto]}.")
+#             else:
+#                 print("El producto ingresado no existe, se añadirá un nuevo producto.")
+#                 productos[nombre_producto] = cantidad
+#                 print(f"Nuevo producto '{nombre_producto}' agregado con stock inicial de {cantidad}.")
 
-            print(f"Inventario actualizado: {productos}")
-        case "3":
-            print("Saliendo del sistema de inventario.")
-            break
-        case _:
-            print("Opción no válida. Por favor, ingrese 1, 2 o 3.")
+#             print(f"Inventario actualizado: {productos}")
+#         case "3":
+#             print("Saliendo del sistema de inventario.")
+#             break
+#         case _:
+#             print("Opción no válida. Por favor, ingrese 1, 2 o 3.")
 
 #9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.Ejemplo:
 """
@@ -211,7 +211,29 @@ agenda = {
 """
 # Permití consultar qué actividad hay en cierto día y hora.
 
-#print("Ejercicio 9")
+print("Ejercicio 9")
+
+agenda = {
+    ("lunes", "10:00"): "Reunión con compañeros",
+    ("martes", "15:00"): "Clase de ingles",
+    ("miércoles", "09:00"): "Entrega de proyecto",
+    ("lunes", "14:00"): "Llamada con cliente"
+}
+
+print("Agenda completa")
+for clave_tupla, evento in agenda.items():
+    dia, hora = clave_tupla
+    print(f"Día: {dia} a las {hora}, {evento}")
+
+dia_consulta = input("Ingrese el día a consultar (ej: lunes): ").lower()
+hora_consulta = input("Ingrese la hora a consultar (ej: 10:00): ")
+
+clave_busqueda = (dia_consulta, hora_consulta)
+if clave_busqueda in agenda:
+    evento = agenda[clave_busqueda]
+    print(f"La actividad programada para el {dia_consulta} a las {hora_consulta} es: {evento}.")
+else:
+    print(f"No hay ninguna actividad programada para el {dia_consulta} a las {hora_consulta}.")
 
 #10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo diccionario donde:
 # • Las capitales sean las claves.
