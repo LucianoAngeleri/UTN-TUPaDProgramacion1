@@ -211,29 +211,29 @@ agenda = {
 """
 # Permití consultar qué actividad hay en cierto día y hora.
 
-print("Ejercicio 9")
+# print("Ejercicio 9")
 
-agenda = {
-    ("lunes", "10:00"): "Reunión con compañeros",
-    ("martes", "15:00"): "Clase de ingles",
-    ("miércoles", "09:00"): "Entrega de proyecto",
-    ("lunes", "14:00"): "Llamada con cliente"
-}
+# agenda = {
+#     ("lunes", "10:00"): "Reunión con compañeros",
+#     ("martes", "15:00"): "Clase de ingles",
+#     ("miércoles", "09:00"): "Entrega de proyecto",
+#     ("lunes", "14:00"): "Llamada con cliente"
+# }
 
-print("Agenda completa")
-for clave_tupla, evento in agenda.items():
-    dia, hora = clave_tupla
-    print(f"Día: {dia} a las {hora}, {evento}")
+# print("Agenda completa")
+# for clave_tupla, evento in agenda.items():
+#     dia, hora = clave_tupla
+#     print(f"Día: {dia} a las {hora}, {evento}")
 
-dia_consulta = input("Ingrese el día a consultar (ej: lunes): ").lower()
-hora_consulta = input("Ingrese la hora a consultar (ej: 10:00): ")
+# dia_consulta = input("Ingrese el día a consultar (ej: lunes): ").lower()
+# hora_consulta = input("Ingrese la hora a consultar (ej: 10:00): ")
 
-clave_busqueda = (dia_consulta, hora_consulta)
-if clave_busqueda in agenda:
-    evento = agenda[clave_busqueda]
-    print(f"La actividad programada para el {dia_consulta} a las {hora_consulta} es: {evento}.")
-else:
-    print(f"No hay ninguna actividad programada para el {dia_consulta} a las {hora_consulta}.")
+# clave_busqueda = (dia_consulta, hora_consulta)
+# if clave_busqueda in agenda:
+#     evento = agenda[clave_busqueda]
+#     print(f"La actividad programada para el {dia_consulta} a las {hora_consulta} es: {evento}.")
+# else:
+#     print(f"No hay ninguna actividad programada para el {dia_consulta} a las {hora_consulta}.")
 
 #10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo diccionario donde:
 # • Las capitales sean las claves.
@@ -244,4 +244,21 @@ original = {"Argentina": "Buenos Aires", "Chile": "Santiago"}
 invertido = {"Buenos Aires": "Argentina", "Santiago": "Chile"}
 """
 
-#print("Ejercicio 10")
+print("Ejercicio 10")
+
+original = {
+    "Argentina": "Buenos Aires",
+    "Chile": "Santiago",
+    "Perú": "Lima",
+    "Colombia": "Bogotá",
+    "Brasil": "Brasilia"
+}
+print("Diccionario de paises y capitales original: ")
+print(original)
+
+invertido = {}
+for pais, capital in original.items():
+    invertido[capital] = pais
+
+print("Diccionario invertido (Capital: País): ")
+print(invertido)
