@@ -28,6 +28,7 @@ with open("productos.txt", "a", encoding="utf8") as archivo:
     precio_producto = input("Ingrese el precio del producto: ").strip()
     cantidad_producto = input("Ingrese la cantidad del producto: ").strip()
     archivo.write(f"{nombre_producto},{precio_producto},{cantidad_producto}\n")
+    print(" 3. Producto agregado exitosamente")
 
 # 4. Cargar productos en una lista de diccionarios: Al leer el archivo, cargar los datos en una lista llamada productos, donde cada elemento sea un diccionario con claves: nombre, precio, cantidad.
 
@@ -47,7 +48,7 @@ with open("productos.txt", "r", encoding="utf8") as archivo:
             "cantidad": cantidad
         }
         productos.append(producto)
-print("Catálogo cargado en diccionario exitosamente: ")
+print(" 4. Catálogo cargado en diccionario exitosamente: ")
 print(productos)
 
 # 5. Buscar producto por nombre: Pedir al usuario que ingrese el nombre de un producto. Recorrer la lista de productos y, si lo encuentra, mostrar todos sus datos. Si no existe, mostrar un mensaje de error.
@@ -58,7 +59,7 @@ encontrado = False
 
 for producto in productos:
     if producto["nombre"].lower() == nombre_producto_buscado.lower():
-        print("--- Producto Encontrado ---")
+        print("--- 5. Producto Encontrado ---")
         print(f"Producto: {producto['nombre']} | Precio: ${producto['precio']} | Cantidad: {producto['cantidad']}")
         encontrado = True
         break
@@ -67,3 +68,22 @@ if not encontrado:
     print(f"No se encontró el producto '{nombre_producto_buscado}'")
 
 # 6. Guardar los productos actualizados: Después de haber leído, buscado o agregado productos, sobrescribir el archivo productos.txt escribiendo nuevamente todos los productos actualizados desde la lista.
+
+print("---- 6. Sobreescribir catalogo desde diccionario ---- ")
+
+with open("productos.txt", "w", encoding="utf8") as archivo:
+    archivo.write("nombre,precio,cantidad\n")
+    for producto in productos:
+        archivo.write(f"{producto['nombre']},{producto['precio']},{producto['cantidad']}\n")
+
+    print("Catálogo de productos actualizado exitosamente.")
+
+with open("productos.txt", "r", encoding="utf8") as archivo:
+    lineas = archivo.readlines()
+    print("---- 6. Catálogo de productos actualizado ----")
+    for linea in lineas[1:]:
+        datos_producto = linea.strip().split(",")
+        nombre = datos_producto[0]
+        precio = datos_producto[1]
+        cantidad = datos_producto[2]
+        print(f"Producto: {nombre} | Precio: ${precio} | Cantidad: {cantidad}")

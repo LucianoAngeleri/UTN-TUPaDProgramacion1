@@ -2,3 +2,4 @@ nombre,precio,cantidad
 Teclado,150,10
 Notebook,1500,5
 Auriculares,200,12
+Mouse,80,70
