@@ -50,26 +50,26 @@ contactos = {"Juan": "123456", "Ana": "987654"}
 #Consultar: "Juan" -> muestra "123456"
 """
 
-print("Ejercicio 4")
+# print("Ejercicio 4")
 
-contactos ={}
-for i in range(0,2):
-    nombre_ingresado = str(input(f"{i+1}. Ingrese un nombre de contacto: "))
-    numero_ingresado = str(input(f"{i+1}. Ingrese un número de contacto: "))
-    contactos.update({
-        nombre_ingresado: numero_ingresado}
-    )
-print("Contactos agregados correctamente.")
+# contactos ={}
+# for i in range(0,2):
+#     nombre_ingresado = str(input(f"{i+1}. Ingrese un nombre de contacto: "))
+#     numero_ingresado = str(input(f"{i+1}. Ingrese un número de contacto: "))
+#     contactos.update({
+#         nombre_ingresado: numero_ingresado}
+#     )
+# print("Contactos agregados correctamente.")
 
-nombre_consulta = str(input("Ingresa un nombre de contacto para consultar: "))
+# nombre_consulta = str(input("Ingresa un nombre de contacto para consultar: "))
 
-if nombre_consulta in contactos:
-    numero_consulta = contactos[nombre_consulta]
-    print(f"El número de {nombre_consulta} es: {numero_consulta}")
-else:
-    print(f"Error: El contacto '{nombre_consulta}' no se encuentra en la agenda.")
+# if nombre_consulta in contactos:
+#     numero_consulta = contactos[nombre_consulta]
+#     print(f"El número de {nombre_consulta} es: {numero_consulta}")
+# else:
+#     print(f"Error: El contacto '{nombre_consulta}' no se encuentra en la agenda.")
 
-#5) 5) Solicita al usuario una frase e imprime:
+#5) Solicita al usuario una frase e imprime:
 # • Las palabras únicas (usando un set).
 # • Un diccionario con la cantidad de veces que aparece cada palabra.
 # Ejemplo:
@@ -80,7 +80,19 @@ Palabras_únicas: {'hola', 'mundo'}
 Recuento: {'hola': 2, 'mundo': 1}
 """
 
-#print("Ejercicio 5")
+print("Ejercicio 5")
+from typing import Counter
+
+frase = str(input("Ingrese una frase: "))
+
+palabras = frase.lower().split()
+palabras_unicas = set(palabras)
+
+recuento_diccionario = dict(Counter(palabras))
+
+print("Salida:")
+print(f"Palabras_únicas: {palabras_unicas}")
+print(f"Recuento: {recuento_diccionario}")
 
 #6)  Permití ingresar los nombres de 3 alumnos, y para cada uno una tupla de 3 notas. Luego, mostrá el promedio de cada alumno. Ejemplo
 """
