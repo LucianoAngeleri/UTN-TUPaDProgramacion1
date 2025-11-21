@@ -102,14 +102,31 @@
 # suma_digitos(9) → 9
 # suma_digitos(305) → 8 (3 + 0 + 5)
 
-print("Ejercicio 6")
+# print("Ejercicio 6")
 
-def suma_digitos(n):
-    if n < 10:
-        return n
+# def suma_digitos(n):
+#     if n < 10:
+#         return n
+#     else:
+#         return (n % 10) + suma_digitos(n // 10)
+
+# numero = int(input("Ingrese un número para sumar sus cifras: "))
+# print(f"La suma de las cifras del número {numero} es {suma_digitos(numero)}")
+
+# 7) Un niño está construyendo una pirámide con bloques. En el nivel más bajo coloca n bloques, en el siguiente nivel uno menos (n - 1), y así sucesivamente hasta llegar al último nivel con un solo bloque.
+# Escribí una función recursiva contar_bloques(n) que reciba el número de bloques en el nivel más bajo y devuelva el total de bloques que necesita para construir toda la pirámide.
+#  Ejemplos:
+# contar_bloques(1) → 1 (1)
+# contar_bloques(2) → 3 (2 + 1)
+
+print("Ejercicio 7")
+
+def contar_bloques(n):
+    if n == 1:
+        return 1
     else:
-        return (n % 10) + suma_digitos(n // 10)
-
-numero = int(input("Ingrese un número para sumar sus cifras: "))
-print(f"La suma de las cifras del número {numero} es {suma_digitos(numero)}")
-
+        return n + contar_bloques(n - 1)
+    
+bloques_base= int(input("Ingrese el número de bloques de la base para construir una pirámide: "))
+bloques_totales = contar_bloques(bloques_base)
+print(f"El número de bloques totales para construir la pirámide es: {bloques_totales}")
