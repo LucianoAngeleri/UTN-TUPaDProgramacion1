@@ -48,11 +48,47 @@
 # 3. Repetir el proceso con el cociente hasta que llegue a 0.
 # 4. Los restos obtenidos, leídos de abajo hacia arriba, forman el número binario.
 
-def a_binario(num):
-    if num < 2:
-        return str(num)
-    else:
-        return a_binario(num // 2) + str(num % 2)
+# print("Ejercicio 4")
 
-numero_decimal = int(input("Ingrese un número entero positivo en base decimal: "))
-print(f"El número {numero_decimal}, en Binario es: {a_binario(numero_decimal)}")
+# def a_binario(num):
+#     if num < 2:
+#         return str(num)
+#     else:
+#         return a_binario(num // 2) + str(num % 2)
+
+# numero_decimal = int(input("Ingrese un número entero positivo en base decimal: "))
+# print(f"El número {numero_decimal}, en Binario es: {a_binario(numero_decimal)}")
+
+# 5) Implementá una función recursiva llamada es_palindromo(palabra) que reciba una cadena de texto sin espacios ni tildes, y devuelva True si es un palíndromo o False si no lo es.
+# Requisitos:
+# * La solución debe ser recursiva.
+# * No se debe usar [::-1] ni la función reversed().
+
+print("Ejercicio 5")
+
+def quitar_tildes(texto):
+    texto = texto.replace("á", "a")
+    texto = texto.replace("é", "e")
+    texto = texto.replace("í", "i")
+    texto = texto.replace("ó", "o")
+    texto = texto.replace("ú", "u")
+    return texto
+def normalizar_texto(texto):
+    texto = texto.replace(" ", "").lower()
+    return texto
+
+def es_palindromo(palabra):
+    if len(palabra)<=1:
+        return True    
+    elif palabra[0] != palabra[-1]:
+        return False
+    return es_palindromo(palabra[1:-1])
+entrada = input("Ingrese una frase o palabra para evaluar si es palíndromo: ")
+
+texto_limpio = quitar_tildes(entrada)
+texto_limpio = normalizar_texto(texto_limpio)
+
+if es_palindromo(texto_limpio):
+    print("La fase ingresada ES un palíndromo")
+else:
+    print("La fase ingresada NO ES es un palíndromo")
