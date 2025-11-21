@@ -64,31 +64,52 @@
 # * La solución debe ser recursiva.
 # * No se debe usar [::-1] ni la función reversed().
 
-print("Ejercicio 5")
+# print("Ejercicio 5")
 
-def quitar_tildes(texto):
-    texto = texto.replace("á", "a")
-    texto = texto.replace("é", "e")
-    texto = texto.replace("í", "i")
-    texto = texto.replace("ó", "o")
-    texto = texto.replace("ú", "u")
-    return texto
-def normalizar_texto(texto):
-    texto = texto.replace(" ", "").lower()
-    return texto
+# def quitar_tildes(texto):
+#     texto = texto.replace("á", "a")
+#     texto = texto.replace("é", "e")
+#     texto = texto.replace("í", "i")
+#     texto = texto.replace("ó", "o")
+#     texto = texto.replace("ú", "u")
+#     return texto
+# def normalizar_texto(texto):
+#     texto = texto.replace(" ", "").lower()
+#     return texto
 
-def es_palindromo(palabra):
-    if len(palabra)<=1:
-        return True    
-    elif palabra[0] != palabra[-1]:
-        return False
-    return es_palindromo(palabra[1:-1])
-entrada = input("Ingrese una frase o palabra para evaluar si es palíndromo: ")
+# def es_palindromo(palabra):
+#     if len(palabra)<=1:
+#         return True    
+#     elif palabra[0] != palabra[-1]:
+#         return False
+#     return es_palindromo(palabra[1:-1])
+# entrada = input("Ingrese una frase o palabra para evaluar si es palíndromo: ")
 
-texto_limpio = quitar_tildes(entrada)
-texto_limpio = normalizar_texto(texto_limpio)
+# texto_limpio = quitar_tildes(entrada)
+# texto_limpio = normalizar_texto(texto_limpio)
 
-if es_palindromo(texto_limpio):
-    print("La fase ingresada ES un palíndromo")
-else:
-    print("La fase ingresada NO ES es un palíndromo")
+# if es_palindromo(texto_limpio):
+#     print("La fase ingresada ES un palíndromo")
+# else:
+#     print("La fase ingresada NO ES es un palíndromo")
+
+# 6) Escribí una función recursiva en Python llamada suma_digitos(n) que reciba un número entero positivo y devuelva la suma de todos sus dígitos.
+# Restricciones:
+# No se puede convertir el número a string.
+# Usá operaciones matemáticas (%, //) y recursión.
+# Ejemplos:
+# suma_digitos(1234) → 10 (1 + 2 + 3 + 4)
+# suma_digitos(9) → 9
+# suma_digitos(305) → 8 (3 + 0 + 5)
+
+print("Ejercicio 6")
+
+def suma_digitos(n):
+    if n < 10:
+        return n
+    else:
+        return (n % 10) + suma_digitos(n // 10)
+
+numero = int(input("Ingrese un número para sumar sus cifras: "))
+print(f"La suma de las cifras del número {numero} es {suma_digitos(numero)}")
+
