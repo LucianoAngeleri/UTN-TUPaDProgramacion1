@@ -119,14 +119,37 @@
 # contar_bloques(1) → 1 (1)
 # contar_bloques(2) → 3 (2 + 1)
 
-print("Ejercicio 7")
+# print("Ejercicio 7")
 
-def contar_bloques(n):
-    if n == 1:
-        return 1
-    else:
-        return n + contar_bloques(n - 1)
+# def contar_bloques(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n + contar_bloques(n - 1)
     
-bloques_base= int(input("Ingrese el número de bloques de la base para construir una pirámide: "))
-bloques_totales = contar_bloques(bloques_base)
-print(f"El número de bloques totales para construir la pirámide es: {bloques_totales}")
+# bloques_base= int(input("Ingrese el número de bloques de la base para construir una pirámide: "))
+# bloques_totales = contar_bloques(bloques_base)
+# print(f"El número de bloques totales para construir la pirámide es: {bloques_totales}")
+
+# 8) Escribí una función recursiva llamada contar_digito(numero, digito) que reciba un número entero positivo (numero) y un dígito (entre 0 y 9), y devuelva cuántas veces aparece ese dígito dentro del número.
+# Ejemplos:
+# contar_digito(12233421, 2) → 3
+# contar_digito(5555, 5) → 4
+# contar_digito(123456, 7) → 0 
+
+print("Ejercicio 8")
+
+def contar_digito(numero, digito):
+    if numero == 0:
+        return 0
+    else:
+        ultimo_digito = numero % 10
+        if ultimo_digito == digito:
+            return 1 + contar_digito(numero // 10, digito)
+        else:
+            return 0 + contar_digito(numero // 10, digito)
+        
+numero_ingresado = int(input("Ingrese un número positivo para evaluar sus dígitos: "))
+digito_ingresado = int(input("Ingrese un dígito para contar la cantidad del dígito : "))
+
+print(f"El número de veces que aparece el digito {digito_ingresado} en el número {numero_ingresado} es: {contar_digito(numero_ingresado, digito_ingresado)}")
