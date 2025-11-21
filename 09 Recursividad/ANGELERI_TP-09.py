@@ -31,12 +31,28 @@
 
 #3) Crea una función recursiva que calcule la potencia de un número base elevado a un exponente, utilizando la fórmula 𝑛^𝑚 = 𝑛 ∗ 𝑛^(𝑚−1). Prueba esta función en un algoritmo general.
 
-print("Ejercicio 3")
+# print("Ejercicio 3")
 
-def potencia_recursiva(n, m):
-    if m == 0:
-        return 1
+# def potencia_recursiva(n, m):
+#     if m == 0:
+#         return 1
+#     else:
+#         return n * potencia_recursiva(n, m - 1)
+
+# print(potencia_recursiva(2, 3))
+
+#4) Crear una función recursiva en Python que reciba un número entero positivo en base decimal y devuelva su representación en binario como una cadena de texto.
+# Cuando representamos un número en binario, lo expresamos usando solamente ceros (0) y unos (1), en base 2. Para convertir un número decimal a binario, se puede seguir este procedimiento:
+# 1. Dividir el número por 2.
+# 2. Guardar el resto (0 o 1).
+# 3. Repetir el proceso con el cociente hasta que llegue a 0.
+# 4. Los restos obtenidos, leídos de abajo hacia arriba, forman el número binario.
+
+def a_binario(num):
+    if num < 2:
+        return str(num)
     else:
-        return n * potencia_recursiva(n, m - 1)
+        return a_binario(num // 2) + str(num % 2)
 
-print(potencia_recursiva(2, 3))
+numero_decimal = int(input("Ingrese un número entero positivo en base decimal: "))
+print(f"El número {numero_decimal}, en Binario es: {a_binario(numero_decimal)}")
